@@ -16,7 +16,8 @@ namespace GenericVoting
 {
     public partial class EntryForm : Form
     {
-        string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
+        Folder folder;
+      //  string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
 
         public EntryForm()
         {
@@ -25,7 +26,7 @@ namespace GenericVoting
         }
         private void get()
         {
-            string[] files = Directory.GetFiles(folder);
+            string[] files = Directory.GetFiles(folder.entryFolder);
             foreach (var f in files)
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(Entry));
@@ -50,7 +51,7 @@ namespace GenericVoting
                 MessageBox.Show("Please complete all the fields required to register.");
             else {
 
-                if (File.Exists(folder + txtEntry.Text + ".xml"))
+                if (File.Exists(folder.entryFolder + txtEntry.Text + ".xml"))
                 {
                     MessageBox.Show("This Entry is already registered. Please try again.");
                 }
@@ -60,7 +61,7 @@ namespace GenericVoting
                     entry.entry = txtEntry.Text;
                     entry.description = txtDes.Text;
                     
-                    Stream stream = File.Create(folder + entry.entry + ".xml");
+                    Stream stream = File.Create(folder.entryFolder + entry.entry + ".xml");
                     XmlSerializer serialize = new XmlSerializer(typeof(Entry));
                     serialize.Serialize(stream, entry);
                      stream.Close();
@@ -78,7 +79,7 @@ namespace GenericVoting
                 if (item.Selected)
                 {
                     lviEntry.Items.Remove(item);
-                    File.Delete(folder + item.SubItems[0].Text + ".xml");
+                    File.Delete(folder.entryFolder + item.SubItems[0].Text + ".xml");
                 }
                 else
                     MessageBox.Show("Select Item to Remove");

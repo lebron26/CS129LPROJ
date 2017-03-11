@@ -16,10 +16,11 @@ namespace GenericVoting
 {
     public partial class frmOrganizer : Form
     {
-        string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
-        static string entryfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
 
-        string[] files = Directory.GetFiles(entryfolder);
+        Folder folder;
+        //string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
+      //  static string entryfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
+
         public frmOrganizer(string name)
         {
             InitializeComponent();
@@ -67,9 +68,10 @@ namespace GenericVoting
         {
             XmlSerializer serializer = new XmlSerializer(typeof(Contest));
 
-            Stream stream = File.Open(folder + name+".xml", FileMode.Open);
+            Stream stream = File.Open(folder.contestFolder + name+".xml", FileMode.Open);
             Contest contest = (Contest)serializer.Deserialize(stream);
 
+            string[] files = Directory.GetFiles(folder.entryFolder);
             /**/
             foreach (var f in files)
             {

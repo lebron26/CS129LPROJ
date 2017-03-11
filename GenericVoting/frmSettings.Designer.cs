@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(218, 350);
+            this.ClientSize = new System.Drawing.Size(431, 350);
             this.Controls.Add(this.btnRules);
             this.Controls.Add(this.btnReset);
             this.Name = "frmSettings";

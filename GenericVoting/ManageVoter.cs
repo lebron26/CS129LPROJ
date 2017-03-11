@@ -16,7 +16,8 @@ namespace GenericVoting
 {
     public partial class ManageVoter : Form
     {
-        string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
+        Folder folder;
+       // string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
         string first;
         string last;
         public ManageVoter()
@@ -29,7 +30,7 @@ namespace GenericVoting
         
         private void get()
         {
-            string[] files = Directory.GetFiles(folder);
+            string[] files = Directory.GetFiles(folder.userFolder);
             foreach (var f in files)
             {
                 
@@ -71,7 +72,7 @@ namespace GenericVoting
                 MessageBox.Show("Please complete all the fields required to register.");
             else {
               
-                if (File.Exists(folder + txtUser.Text + ".xml"))
+                if (File.Exists(folder.userFolder + txtUser.Text + ".xml"))
                 {
                     MessageBox.Show("This username is already registered. Please try again.");
                 }
@@ -82,7 +83,7 @@ namespace GenericVoting
                     UserDecorator decorate;
                     decorate = new Voter(userconcrete);
                     
-                    Stream stream = File.Create(folder + userconcrete.username + ".xml");
+                    Stream stream = File.Create(folder.userFolder + userconcrete.username + ".xml");
 
                     XmlSerializer serialize = new XmlSerializer(typeof(UserConcrete));
                     serialize.Serialize(stream, userconcrete);
@@ -103,7 +104,7 @@ namespace GenericVoting
                 if (item.Selected)
                 {
                    lviVoter.Items.Remove(item);
-                     File.Delete(folder + item.SubItems[0].Text + ".xml");
+                     File.Delete(folder.userFolder + item.SubItems[0].Text + ".xml");
                 }
                 else
                     MessageBox.Show("Select Item to Remove");

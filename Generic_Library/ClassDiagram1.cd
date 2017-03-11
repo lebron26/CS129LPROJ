@@ -36,7 +36,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Generic_Library.Contest">
-    <Position X="9.25" Y="8.5" Width="1.5" />
+    <Position X="5.75" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAIBgAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Contest.cs</FileName>
@@ -49,12 +49,12 @@
       <FileName>UserConcrete.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Generic_Library.IContest">
-    <Position X="2.75" Y="9.25" Width="3" />
+  <Class Name="Generic_Library.Folder">
+    <Position X="10" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IContest.cs</FileName>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAgQAAAAAAAAA=</HashCode>
+      <FileName>Folder.cs</FileName>
     </TypeIdentifier>
-  </Interface>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

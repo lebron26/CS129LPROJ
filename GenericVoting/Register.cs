@@ -21,11 +21,12 @@ namespace GenericVoting
             this.get();
         }
 
-        string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
+        Folder folder;
+        //string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
 
         private void get()
         {
-            string[] files = Directory.GetFiles(folder);
+            string[] files = Directory.GetFiles(folder.userFolder);
             foreach (var f in files)
             {
 
@@ -70,7 +71,7 @@ namespace GenericVoting
             else {
                 string combo = cmbSelect.SelectedItem.ToString();
 
-                if (File.Exists(folder + txtUser.Text + ".xml"))
+                if (File.Exists(folder.userFolder + txtUser.Text + ".xml"))
                 {
                     MessageBox.Show("This username is already registered. Please try again.");
                 }
@@ -92,7 +93,7 @@ namespace GenericVoting
                         decorate = new Organizer(userconcrete);
                     }
 
-                    Stream stream = File.Create(folder + userconcrete.username + ".xml");
+                    Stream stream = File.Create(folder.userFolder + userconcrete.username + ".xml");
 
                     XmlSerializer serialize = new XmlSerializer(typeof(UserConcrete));
                     serialize.Serialize(stream, userconcrete);
