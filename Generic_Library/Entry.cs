@@ -19,10 +19,7 @@ namespace Generic_Library
         {
         }
 
-        public int maxVotes(int vote)
-        {
-            return vote;
-        }
+     
 
 
         public override string Display()

@@ -80,13 +80,16 @@ namespace GenericVoting
 
                 Stream stream1 = File.Open(f,FileMode.Open);
                 Entry entry = (Entry)serializer1.Deserialize(stream1);
-
-                if (entry.vote == contest.maxVote)
+             
+                if (contest.WinVotes(entry.vote,contest.maxVote) ==true)
                 {
                     frmSummarize sum = new frmSummarize();
-
+                    sum.LblNameContest.Text = contest.contest;
+                    sum.Txtwinner.Text = entry.entry;
+                    sum.TxtVotes.Text = entry.vote.ToString();
                     sum.ShowDialog();
-
+                    this.Dispose();
+                    this.Close();
                 }
                 
                stream1.Close();

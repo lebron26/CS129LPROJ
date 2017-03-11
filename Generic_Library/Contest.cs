@@ -19,9 +19,9 @@ namespace Generic_Library
             specificDate = duration;
             this.maxVote = maxVote;
         }
-        public bool WinVotes(int entryvote)
+        public bool WinVotes(int entryvote,int maxVote)
         {
-            if (maxVote == entryvote)
+            if (maxVote <= entryvote)
                 return true;
             else
                 return false;

@@ -32,6 +32,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -62,11 +63,22 @@
             this.columnHeader3.Text = "Votes";
             this.columnHeader3.Width = 304;
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(289, 366);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(319, 59);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 397);
+            this.ClientSize = new System.Drawing.Size(967, 437);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.listView1);
             this.Name = "frmResults";
             this.Text = "frmResults";
@@ -80,5 +92,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Button btnClose;
     }
 }

@@ -23,7 +23,7 @@ namespace Generic_Library
 
         public override string Display()
         {
-            return lastname+lastname;
+            return username;
         }
     }
 }

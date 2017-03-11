@@ -68,9 +68,11 @@ namespace GenericVoting
                                 MessageBox.Show("Welcome Organizer!");
                                 frmOrganizer organform = new frmOrganizer(contest.contest);
                                 organform.LblContestName.Text = contest.contest;
-                          
+                             
+                               
                                 organform.Show();
                                 this.Hide();
+
                             }
                             else
                                 MessageBox.Show("Create Contest");
@@ -79,6 +81,10 @@ namespace GenericVoting
                     }
                 }
                 stream.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password");
             }
         }
 
