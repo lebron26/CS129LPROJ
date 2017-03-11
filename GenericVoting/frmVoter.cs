@@ -106,11 +106,11 @@ namespace GenericVoting
 
                     btnVote.Enabled = false;
 
+                    listView1.Enabled = false;
+
                 }
-                    
-                  
-                }
-            listView1.Enabled = false;
+
+            }
         }
     
 

@@ -10,17 +10,17 @@ namespace Generic_Library
 
         public string getEntry()
         {
-            return @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
+            return @"C:\Users\dell pc\Documents\CS129LGenericVotingSystem\Entry\";
         }
 
         public string getUser()
         {
-            return @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\"; 
+            return @"C:\Users\dell pc\Documents\CS129LGenericVotingSystem\Users\"; 
         }
 
         public string getContest()
         {
-            return @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
+            return @"C:\Users\dell pc\Documents\CS129LGenericVotingSystem\Contest\";
         }
 
         public ClassFolder()
