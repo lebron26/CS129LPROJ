@@ -43,6 +43,7 @@ namespace GenericVoting
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEntry = new System.Windows.Forms.TextBox();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,7 +114,7 @@ namespace GenericVoting
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(386, 356);
+            this.btnCancel.Location = new System.Drawing.Point(216, 356);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(111, 69);
             this.btnCancel.TabIndex = 5;
@@ -153,11 +154,22 @@ namespace GenericVoting
             this.txtEntry.Size = new System.Drawing.Size(203, 26);
             this.txtEntry.TabIndex = 9;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(387, 356);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(130, 69);
+            this.btnLogout.TabIndex = 10;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // frmVoter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 448);
+            this.ClientSize = new System.Drawing.Size(702, 448);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.txtEntry);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtUser);
@@ -190,6 +202,7 @@ namespace GenericVoting
         private TextBox txtUser;
         private Label label3;
         private TextBox txtEntry;
+        private Button btnLogout;
 
         public TextBox TxtName
         {

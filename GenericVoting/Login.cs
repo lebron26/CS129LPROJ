@@ -40,7 +40,8 @@ namespace GenericVoting
                 {
                     if (user.type == "Voter")
                     {
-                        
+
+                        stream.Close();
                         MessageBox.Show(user.Display());
                         frmVoter voteform = new frmVoter(txtUser.Text);
                         voteform.TxtName.Text = user.firstname+" "+user.lastname;

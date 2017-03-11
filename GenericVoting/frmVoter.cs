@@ -151,6 +151,9 @@ namespace GenericVoting
                     }
 
                 }
+                btnCancel.Enabled = true;
+
+                btnVote.Enabled = false;
                 txtEntry.Enabled = false;
                 listView1.Enabled = false;
             }
@@ -164,7 +167,10 @@ namespace GenericVoting
  
                 }
                 txtEntry.Enabled = false;
-                
+                btnCancel.Enabled = false;
+
+                btnVote.Enabled = true;
+
             }
             
                 stream2.Close(); 
@@ -264,6 +270,15 @@ namespace GenericVoting
                     txtEntry.Text = item.SubItems[0].Text;
                 }
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            this.Close();
+            Login login = new Login();
+            login.ShowDialog();
+           
         }
     }
 }
