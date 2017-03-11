@@ -49,11 +49,11 @@
       <FileName>UserConcrete.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Generic_Library.Folder">
+  <Class Name="Generic_Library.ClassFolder">
     <Position X="10" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAgQAAAAAAAAA=</HashCode>
-      <FileName>Folder.cs</FileName>
+      <FileName>ClassFolder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -16,7 +16,7 @@ namespace GenericVoting
 {
     public partial class frmSettings : Form
     {
-        Folder folder;
+        ClassFolder folder;
        // static string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
       //  string userfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
 
@@ -27,7 +27,7 @@ namespace GenericVoting
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-
+            folder = new ClassFolder();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace GenericVoting
 {
     public partial class EntryForm : Form
     {
-        Folder folder;
+        public ClassFolder folder;
       //  string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
 
         public EntryForm()
@@ -26,7 +26,8 @@ namespace GenericVoting
         }
         private void get()
         {
-            string[] files = Directory.GetFiles(folder.entryFolder);
+            folder = new ClassFolder();
+            string[] files = Directory.GetFiles(folder.getEntry());
             foreach (var f in files)
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(Entry));
@@ -46,12 +47,12 @@ namespace GenericVoting
 
         private void btnADDEntry_Click(object sender, EventArgs e)
         {
-            
+            folder = new ClassFolder();
             if (txtEntry.Text == "" || txtDes.Text=="")
                 MessageBox.Show("Please complete all the fields required to register.");
             else {
 
-                if (File.Exists(folder.entryFolder + txtEntry.Text + ".xml"))
+                if (File.Exists(folder.getEntry() + txtEntry.Text + ".xml"))
                 {
                     MessageBox.Show("This Entry is already registered. Please try again.");
                 }
@@ -61,7 +62,7 @@ namespace GenericVoting
                     entry.entry = txtEntry.Text;
                     entry.description = txtDes.Text;
                     
-                    Stream stream = File.Create(folder.entryFolder + entry.entry + ".xml");
+                    Stream stream = File.Create(folder.getEntry() + entry.entry + ".xml");
                     XmlSerializer serialize = new XmlSerializer(typeof(Entry));
                     serialize.Serialize(stream, entry);
                      stream.Close();
@@ -71,6 +72,7 @@ namespace GenericVoting
 
         private void btnDeleteEntry_Click(object sender, EventArgs e)
         {
+            folder = new ClassFolder();
             if (lviEntry.Items.Count == 0)
                 MessageBox.Show("No more items to erase");
 
@@ -79,7 +81,7 @@ namespace GenericVoting
                 if (item.Selected)
                 {
                     lviEntry.Items.Remove(item);
-                    File.Delete(folder.entryFolder + item.SubItems[0].Text + ".xml");
+                    File.Delete(folder.getEntry() + item.SubItems[0].Text + ".xml");
                 }
                 else
                     MessageBox.Show("Select Item to Remove");

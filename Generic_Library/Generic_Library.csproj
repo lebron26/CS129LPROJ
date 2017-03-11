@@ -44,7 +44,7 @@
     <Compile Include="Contest.cs" />
     <Compile Include="Entry.cs" />
     <Compile Include="EntryList.cs" />
-    <Compile Include="Folder.cs" />
+    <Compile Include="ClassFolder.cs" />
     <Compile Include="IContest.cs" />
     <Compile Include="Organizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

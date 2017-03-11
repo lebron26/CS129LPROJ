@@ -16,7 +16,7 @@ namespace GenericVoting
 {
     public partial class Login : Form
     {
-        Folder folder;
+        ClassFolder folder;
        // string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
       //  string contestfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
 
@@ -27,11 +27,12 @@ namespace GenericVoting
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            folder= new ClassFolder();
             XmlSerializer serializer = new XmlSerializer(typeof(UserConcrete));
 
-            if (File.Exists(folder.userFolder + txtUser.Text + ".xml"))
+            if (File.Exists(folder.getUser() + txtUser.Text + ".xml"))
             {
-                Stream stream = File.Open(folder.userFolder + txtUser.Text + ".xml", FileMode.Open);
+                Stream stream = File.Open(folder.getUser() + txtUser.Text + ".xml", FileMode.Open);
                 UserConcrete user = (UserConcrete)serializer.Deserialize(stream);
               
 
@@ -52,7 +53,7 @@ namespace GenericVoting
                     else
                     {
 
-                        string[] files = Directory.GetFiles(folder.contestFolder);
+                        string[] files = Directory.GetFiles(folder.getContest());
                         foreach (var f in files)
                         {
                             if (File.Exists(f))

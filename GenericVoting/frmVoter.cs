@@ -17,7 +17,7 @@ namespace GenericVoting
 {
     public partial class frmVoter : Form
     {
-        Folder folder;
+        ClassFolder folder;
 
         //static string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
         //string userfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
@@ -30,13 +30,13 @@ namespace GenericVoting
         }
         private void btnVote_Click(object sender, EventArgs e)
         {
-            
+            folder = new ClassFolder();
             foreach (ListViewItem item in listView1.Items)
             {
                 if (item.Selected)
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(UserConcrete));
-                    Stream stream = File.Open(folder.userFolder + txtUser.Text + ".xml", FileMode.Open);
+                    Stream stream = File.Open(folder.getUser() + txtUser.Text + ".xml", FileMode.Open);
                    
                     UserConcrete user = (UserConcrete)serializer.Deserialize(stream);
 
@@ -51,7 +51,7 @@ namespace GenericVoting
                        
                         }
                         XmlSerializer entryserializer = new XmlSerializer(typeof(Entry));
-                        Stream entrystream = File.Open(folder.entryFolder + entry1 + ".xml", FileMode.Open);
+                        Stream entrystream = File.Open(folder.getEntry() + entry1 + ".xml", FileMode.Open);
                         Entry entry = (Entry)entryserializer.Deserialize(entrystream);
 
                         user.entry = entry1;
@@ -116,13 +116,14 @@ namespace GenericVoting
 
         private void get(string use)
         {
+            folder = new ClassFolder();
             XmlSerializer serializer2 = new XmlSerializer(typeof(UserConcrete));
-            Stream stream2 = File.Open(folder.userFolder + use + ".xml", FileMode.Open);
+            Stream stream2 = File.Open(folder.getUser() + use + ".xml", FileMode.Open);
 
             UserConcrete user = (UserConcrete)serializer2.Deserialize(stream2);
 
 
-            string[] files = Directory.GetFiles(folder.entryFolder);
+            string[] files = Directory.GetFiles(folder.getEntry());
 
             foreach (var f in files)
             {
@@ -171,10 +172,11 @@ namespace GenericVoting
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            folder = new ClassFolder();
             foreach (ListViewItem item in listView1.Items)
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(UserConcrete));
-                using (Stream stream = File.Open(folder.userFolder + TxtUser.Text + ".xml", FileMode.Open))
+                using (Stream stream = File.Open(folder.getUser() + TxtUser.Text + ".xml", FileMode.Open))
                 {
                     UserConcrete user = (UserConcrete)serializer.Deserialize(stream);
 
@@ -189,7 +191,7 @@ namespace GenericVoting
                             item.BackColor = Color.White;
                         }
                         XmlSerializer entryserializer = new XmlSerializer(typeof(Entry));
-                        Stream entrystream = File.Open(folder.entryFolder + entry1 + ".xml", FileMode.Open);
+                        Stream entrystream = File.Open(folder.getEntry() + entry1 + ".xml", FileMode.Open);
                         Entry entry = (Entry)entryserializer.Deserialize(entrystream);
 
                         user.entry = "null";

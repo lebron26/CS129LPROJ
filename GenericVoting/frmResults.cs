@@ -16,7 +16,7 @@ namespace GenericVoting
 {
     public partial class frmResults : Form
     {
-        Folder folder;
+        ClassFolder folder;
        // static string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
         //string userfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
 
@@ -28,8 +28,8 @@ namespace GenericVoting
 
         private void get()
         {
-
-            string[] files = Directory.GetFiles(folder.entryFolder);
+            folder = new ClassFolder();
+            string[] files = Directory.GetFiles(folder.getEntry());
             foreach (var f in files)
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(Entry));

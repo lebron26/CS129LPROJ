@@ -17,7 +17,7 @@ namespace GenericVoting
     public partial class frmContest : Form
     {
 
-        Folder folder;
+        ClassFolder folder;
         //string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
 
         Contest contest;
@@ -28,9 +28,10 @@ namespace GenericVoting
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            folder = new ClassFolder();
             contest = new Contest(txtContest.Text, richTextBox1.Text, datePicker1.Value, Convert.ToInt32(txtVotes.Text));
 
-            Stream stream = File.Create(folder.contestFolder + txtContest.Text + ".xml");
+            Stream stream = File.Create(folder.getContest() + txtContest.Text + ".xml");
 
             XmlSerializer serialize = new XmlSerializer(typeof(Contest));
             serialize.Serialize(stream, contest);
