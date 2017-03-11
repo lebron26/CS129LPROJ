@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Generic_Library.User">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Generic_Library.UserDecorator">
+    <Position X="9" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>UserDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Generic_Library.Voter">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Voter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Generic_Library.Entry">
+    <Position X="9" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAIAAAAQAAAAAAAAAAAAAAAAAgEAA=</HashCode>
+      <FileName>Entry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Generic_Library.Organizer">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Organizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Generic_Library.Contest">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIBgAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Generic_Library.UserConcrete">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAhAAAAAAAAAAQEAAAABAAAAAAAAAgAAEAA=</HashCode>
+      <FileName>UserConcrete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Generic_Library.IContest">
+    <Position X="2.75" Y="9.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IContest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
