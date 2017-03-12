@@ -41,78 +41,115 @@ namespace GenericVoting
             // 
             // btnUsers
             // 
-            this.btnUsers.Location = new System.Drawing.Point(284, 93);
+            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnUsers.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnUsers.Location = new System.Drawing.Point(31, 101);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(226, 73);
+            this.btnUsers.Size = new System.Drawing.Size(146, 58);
             this.btnUsers.TabIndex = 0;
             this.btnUsers.Text = "Users";
-            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.UseVisualStyleBackColor = false;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnVoters
             // 
-            this.btnVoters.Location = new System.Drawing.Point(118, 199);
+            this.btnVoters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnVoters.FlatAppearance.BorderSize = 0;
+            this.btnVoters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoters.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnVoters.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnVoters.Location = new System.Drawing.Point(186, 167);
+            this.btnVoters.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVoters.Name = "btnVoters";
-            this.btnVoters.Size = new System.Drawing.Size(226, 71);
+            this.btnVoters.Size = new System.Drawing.Size(146, 58);
             this.btnVoters.TabIndex = 1;
             this.btnVoters.Text = "Voter";
-            this.btnVoters.UseVisualStyleBackColor = true;
+            this.btnVoters.UseVisualStyleBackColor = false;
             this.btnVoters.Click += new System.EventHandler(this.btnVoters_Click);
             // 
             // btnEntry
             // 
-            this.btnEntry.Location = new System.Drawing.Point(118, 314);
+            this.btnEntry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnEntry.FlatAppearance.BorderSize = 0;
+            this.btnEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntry.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnEntry.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEntry.Location = new System.Drawing.Point(31, 167);
+            this.btnEntry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEntry.Name = "btnEntry";
-            this.btnEntry.Size = new System.Drawing.Size(226, 79);
+            this.btnEntry.Size = new System.Drawing.Size(146, 58);
             this.btnEntry.TabIndex = 2;
             this.btnEntry.Text = "Entry";
-            this.btnEntry.UseVisualStyleBackColor = true;
+            this.btnEntry.UseVisualStyleBackColor = false;
             this.btnEntry.Click += new System.EventHandler(this.btnEntry_Click);
             // 
             // btnResults
             // 
-            this.btnResults.Location = new System.Drawing.Point(466, 198);
+            this.btnResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnResults.FlatAppearance.BorderSize = 0;
+            this.btnResults.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResults.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnResults.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnResults.Location = new System.Drawing.Point(186, 101);
+            this.btnResults.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnResults.Name = "btnResults";
-            this.btnResults.Size = new System.Drawing.Size(173, 72);
+            this.btnResults.Size = new System.Drawing.Size(146, 58);
             this.btnResults.TabIndex = 3;
             this.btnResults.Text = "Results";
-            this.btnResults.UseVisualStyleBackColor = true;
+            this.btnResults.UseVisualStyleBackColor = false;
             this.btnResults.Click += new System.EventHandler(this.btnResults_Click);
             // 
             // btnSetting
             // 
-            this.btnSetting.Location = new System.Drawing.Point(466, 317);
+            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnSetting.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSetting.Location = new System.Drawing.Point(31, 234);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(173, 72);
+            this.btnSetting.Size = new System.Drawing.Size(146, 58);
             this.btnSetting.TabIndex = 4;
             this.btnSetting.Text = "Settings";
-            this.btnSetting.UseVisualStyleBackColor = true;
+            this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // lblContestName
             // 
             this.lblContestName.AutoSize = true;
-            this.lblContestName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContestName.Location = new System.Drawing.Point(277, 27);
+            this.lblContestName.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContestName.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblContestName.Location = new System.Drawing.Point(128, 13);
+            this.lblContestName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContestName.Name = "lblContestName";
-            this.lblContestName.Size = new System.Drawing.Size(100, 37);
+            this.lblContestName.Size = new System.Drawing.Size(130, 26);
             this.lblContestName.TabIndex = 5;
-            this.lblContestName.Text = "label1";
+            this.lblContestName.Text = "ContestName";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(575, 40);
+            this.lblDate.Font = new System.Drawing.Font("Corbel", 9F);
+            this.lblDate.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblDate.Location = new System.Drawing.Point(90, 54);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(51, 20);
+            this.lblDate.Size = new System.Drawing.Size(31, 14);
             this.lblDate.TabIndex = 6;
-            this.lblDate.Text = "label1";
+            this.lblDate.Text = "Date";
             // 
             // frmOrganizer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 405);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(362, 327);
+            this.ControlBox = false;
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblContestName);
             this.Controls.Add(this.btnSetting);
@@ -120,8 +157,11 @@ namespace GenericVoting
             this.Controls.Add(this.btnEntry);
             this.Controls.Add(this.btnVoters);
             this.Controls.Add(this.btnUsers);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmOrganizer";
-            this.Text = "frmOrganizer";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

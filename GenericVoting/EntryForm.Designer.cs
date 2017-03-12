@@ -41,35 +41,44 @@ namespace GenericVoting
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtDes = new System.Windows.Forms.RichTextBox();
             this.btnEntry = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 250);
+            this.label1.Font = new System.Drawing.Font("Corbel", 9F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(42, 224);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(37, 14);
             this.label1.TabIndex = 0;
             this.label1.Text = "Entry:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 291);
+            this.label2.Font = new System.Drawing.Font("Corbel", 9F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(13, 264);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
+            this.label2.Size = new System.Drawing.Size(66, 14);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Description";
+            this.label2.Text = "Description:";
             // 
             // lviEntry
             // 
             this.lviEntry.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.lviEntry.Font = new System.Drawing.Font("Corbel", 9F);
             this.lviEntry.FullRowSelect = true;
-            this.lviEntry.Location = new System.Drawing.Point(41, 35);
+            this.lviEntry.Location = new System.Drawing.Point(11, 80);
+            this.lviEntry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lviEntry.Name = "lviEntry";
-            this.lviEntry.Size = new System.Drawing.Size(498, 203);
+            this.lviEntry.Size = new System.Drawing.Size(425, 133);
             this.lviEntry.TabIndex = 2;
             this.lviEntry.UseCompatibleStateImageBehavior = false;
             this.lviEntry.View = System.Windows.Forms.View.Details;
@@ -87,64 +96,108 @@ namespace GenericVoting
             // 
             // btnADDEntry
             // 
-            this.btnADDEntry.Location = new System.Drawing.Point(83, 370);
+            this.btnADDEntry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnADDEntry.FlatAppearance.BorderSize = 0;
+            this.btnADDEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnADDEntry.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnADDEntry.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnADDEntry.Location = new System.Drawing.Point(121, 318);
+            this.btnADDEntry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnADDEntry.Name = "btnADDEntry";
-            this.btnADDEntry.Size = new System.Drawing.Size(131, 57);
+            this.btnADDEntry.Size = new System.Drawing.Size(97, 46);
             this.btnADDEntry.TabIndex = 3;
-            this.btnADDEntry.Text = "ADD ENTRY";
-            this.btnADDEntry.UseVisualStyleBackColor = true;
+            this.btnADDEntry.Text = "Add Entry";
+            this.btnADDEntry.UseVisualStyleBackColor = false;
             this.btnADDEntry.Click += new System.EventHandler(this.btnADDEntry_Click);
             // 
             // btnDeleteEntry
             // 
-            this.btnDeleteEntry.Location = new System.Drawing.Point(243, 370);
+            this.btnDeleteEntry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnDeleteEntry.FlatAppearance.BorderSize = 0;
+            this.btnDeleteEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteEntry.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnDeleteEntry.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDeleteEntry.Location = new System.Drawing.Point(230, 318);
+            this.btnDeleteEntry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteEntry.Name = "btnDeleteEntry";
-            this.btnDeleteEntry.Size = new System.Drawing.Size(123, 57);
+            this.btnDeleteEntry.Size = new System.Drawing.Size(97, 46);
             this.btnDeleteEntry.TabIndex = 4;
             this.btnDeleteEntry.Text = "Delete Entry";
-            this.btnDeleteEntry.UseVisualStyleBackColor = true;
+            this.btnDeleteEntry.UseVisualStyleBackColor = false;
             this.btnDeleteEntry.Click += new System.EventHandler(this.btnDeleteEntry_Click);
             // 
             // txtEntry
             // 
-            this.txtEntry.Location = new System.Drawing.Point(147, 244);
+            this.txtEntry.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtEntry.Location = new System.Drawing.Point(88, 221);
+            this.txtEntry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEntry.Name = "txtEntry";
-            this.txtEntry.Size = new System.Drawing.Size(100, 26);
+            this.txtEntry.Size = new System.Drawing.Size(68, 22);
             this.txtEntry.TabIndex = 5;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(416, 370);
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.Location = new System.Drawing.Point(339, 318);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(123, 57);
+            this.btnCancel.Size = new System.Drawing.Size(97, 46);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtDes
             // 
-            this.txtDes.Location = new System.Drawing.Point(147, 276);
+            this.txtDes.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtDes.Location = new System.Drawing.Point(88, 250);
+            this.txtDes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(354, 64);
+            this.txtDes.Size = new System.Drawing.Size(282, 54);
             this.txtDes.TabIndex = 9;
             this.txtDes.Text = "";
             // 
             // btnEntry
             // 
-            this.btnEntry.Location = new System.Drawing.Point(2, 370);
+            this.btnEntry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnEntry.FlatAppearance.BorderSize = 0;
+            this.btnEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntry.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnEntry.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEntry.Location = new System.Drawing.Point(11, 319);
+            this.btnEntry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEntry.Name = "btnEntry";
-            this.btnEntry.Size = new System.Drawing.Size(75, 56);
+            this.btnEntry.Size = new System.Drawing.Size(97, 45);
             this.btnEntry.TabIndex = 10;
             this.btnEntry.Text = "New Entry";
-            this.btnEntry.UseVisualStyleBackColor = true;
+            this.btnEntry.UseVisualStyleBackColor = false;
             this.btnEntry.Click += new System.EventHandler(this.btnEntry_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.label5.Font = new System.Drawing.Font("Corbel", 26.25F);
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(163, 9);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 42);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Entries";
             // 
             // EntryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 439);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(447, 375);
+            this.ControlBox = false;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnEntry);
             this.Controls.Add(this.txtDes);
             this.Controls.Add(this.btnCancel);
@@ -154,8 +207,11 @@ namespace GenericVoting
             this.Controls.Add(this.lviEntry);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EntryForm";
-            this.Text = "EntryForm";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +230,7 @@ namespace GenericVoting
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.RichTextBox txtDes;
         private System.Windows.Forms.Button btnEntry;
+        private Label label5;
 
         public Button BtnDeleteEntry
         {

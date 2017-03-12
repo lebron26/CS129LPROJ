@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 <UserConcrete xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <username>anthony</username>
+  <username>pogi</username>
   <password>123</password>
-  <firstname>anthony</firstname>
-  <lastname>davis</lastname>
-  <type>Voter</type>
+  <firstname>alpi</firstname>
+  <lastname>da great</lastname>
+  <type>Entry</type>
   <status>true</status>
-  <entry>Kobe Bryant</entry>
 </UserConcrete>
