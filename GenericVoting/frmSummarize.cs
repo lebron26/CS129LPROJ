@@ -55,9 +55,9 @@ namespace GenericVoting
                     }
                 }
 
+                stream.Close();
             }
 
-            stream.Close();
         }
     }
 }
