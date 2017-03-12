@@ -27,7 +27,7 @@ namespace GenericVoting
         private void btnClose_Click(object sender, EventArgs e)
         {
             folder = new ClassFolder();
-            this.clearFolder(folder.getEntry());
+            this.clearFolder(folder.getUser());
           
 
             this.clearFolder(folder.getEntry());

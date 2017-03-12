@@ -22,8 +22,7 @@ namespace GenericVoting
         }
 
         ClassFolder folder;
-        //string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
-
+   
         private void get()
         {
             folder = new ClassFolder();
@@ -42,23 +41,14 @@ namespace GenericVoting
                     
                     item.SubItems.Add(user.password);
                     item.SubItems.Add(user.firstname + " " + user.lastname);
-                    item.SubItems.Add(user.type);
-                    /*
-                    if (user.status == true)
-                    {
-                        item.SubItems.Add("Finished");
-
-                        txtStatus.Text = "Finished";
-                    }
-                    else
-                    {
-
-                        item.SubItems.Add("Not Finished");
-                        txtStatus.Text = "Not Finished";
-                    }*/
+                    item.SubItems.Add(user.type);              
                     lviUsers.Items.Add(item);
 
-               
+                    //Color
+                    if (user.type == "Organizer")
+                        item.BackColor = Color.LightGoldenrodYellow;
+                    else
+                        item.BackColor = Color.LightBlue;
                 }
                 stream.Close();
             }
@@ -127,8 +117,8 @@ namespace GenericVoting
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            this.Close();
+            this.Hide();
+       
         }
 
         private void lviUsers_SelectedIndexChanged(object sender, EventArgs e)
@@ -151,10 +141,10 @@ namespace GenericVoting
                     txtLast.Enabled = false;
                     cmbSelect.Text = item.SubItems[3].Text;
 
-
-                    // = item.SubItems[4].Text;
                 }
             }
         }
+
+       
     }
 }

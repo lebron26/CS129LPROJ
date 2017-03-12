@@ -17,9 +17,6 @@ namespace GenericVoting
     public partial class frmResults : Form
     {
         ClassFolder folder;
-       // static string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
-        //string userfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
-
         public frmResults()
         {
             InitializeComponent();

@@ -18,8 +18,7 @@ namespace GenericVoting
     public partial class EntryForm : Form
     {
         public ClassFolder folder;
-        //  string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
-        string getname;
+         string getname;
         string userstatus;
         public EntryForm(string name)
         {
@@ -60,11 +59,7 @@ namespace GenericVoting
                     MessageBox.Show("This Entry is already registered. Please try again.");
                 }
                 else
-                {/*
-                    Stream stream = File.Create(folder.getUser() + getname + ".xml");
-                    XmlSerializer serialize = new XmlSerializer(typeof(UserConcrete));
-                    serialize.Serialize(stream, User);
-                    */
+                {
                     XmlSerializer serializer2 = new XmlSerializer(typeof(UserConcrete));
                     Stream stream2 = File.Open(folder.getUser() +getname + ".xml", FileMode.Open);
 
@@ -76,7 +71,7 @@ namespace GenericVoting
               
                     entry.entryuser = getname;
 
-                      if (!user.status)
+                    if (!user.status)
                     {
                         Stream stream = File.Create(folder.getEntry() + entry.entry + ".xml");
                         XmlSerializer serialize = new XmlSerializer(typeof(Entry));
@@ -88,8 +83,6 @@ namespace GenericVoting
                             item.SubItems[1].Text = txtDes.Text;
                         }
 
-                        /**/
-                     
                         userstatus = "true";
 
                         XmlDocument xmlDoc = new XmlDocument();
@@ -105,6 +98,9 @@ namespace GenericVoting
                         stream2.SetLength(0);
                         xmlDoc.Save(stream2);
                         stream2.Close();
+
+                        lviEntry.Items.Clear();
+                        this.get();
 
                     }
                     else

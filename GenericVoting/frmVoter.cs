@@ -18,11 +18,7 @@ namespace GenericVoting
     public partial class frmVoter : Form
     {
         ClassFolder folder;
-
-        //static string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
-        //string userfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
-
-        public frmVoter(string user)
+         public frmVoter(string user)
         {
             
             InitializeComponent();
@@ -45,11 +41,7 @@ namespace GenericVoting
 
                         string entry1 = item.SubItems[0].Text;
                       
-                        if(item.Text==item.SubItems[0].Text)
-                        {
-                            item.BackColor = Color.LightBlue;
                        
-                        }
                         XmlSerializer entryserializer = new XmlSerializer(typeof(Entry));
                         Stream entrystream = File.Open(folder.getEntry() + entry1 + ".xml", FileMode.Open);
                         Entry entry = (Entry)entryserializer.Deserialize(entrystream);
@@ -69,17 +61,14 @@ namespace GenericVoting
                         if (node!=null)
 
                         node.InnerText = status;
-                 //Enttry
-                          node1.InnerText = user.entry;
+             
+                        node1.InnerText = user.entry;
                         stream.Position = 0;
                         stream.SetLength(0);
                         
                         xmlDoc.Save(stream);
                         stream.Close();
-                        
-
-                        /*      ////////////            */
-
+                     
                         /*            FOR VOTES          */
 
                         XmlDocument xmlDoc1 = new XmlDocument();
@@ -96,22 +85,20 @@ namespace GenericVoting
                         xmlDoc1.Save(entrystream);
                         xmlDoc1 = null;
                         entrystream.Close();
-
-                        /*      ////////////            */
                         listView1.Items.Clear();
                         this.get(txtUser.Text);
+                        /*      ////////////            */
+
 
                     }
-                        else
-                            MessageBox.Show("You Cannot Vote");
+                    else
+                        MessageBox.Show("You Cannot Vote");
                     btnCancel.Enabled = true;
-
+                 
                     btnVote.Enabled = false;
 
                     listView1.Enabled = false;
-
                 }
-
             }
         }
     
@@ -146,10 +133,10 @@ namespace GenericVoting
             {
                 foreach (ListViewItem lvi in listView1.Items)
                 {
+                    lvi.BackColor = Color.AliceBlue;
                     if (lvi.SubItems[0].Text == user.entry)
                     {
                         txtEntry.Text = lvi.SubItems[0].Text;
-                        lvi.SubItems[0].BackColor = Color.LightBlue;
                     }
 
                 }
@@ -165,7 +152,6 @@ namespace GenericVoting
                 foreach (ListViewItem lvi in listView1.Items)
                 {
                     txtEntry.Text = lvi.SubItems[0].Text;
-                    lvi.SubItems[0].BackColor = Color.White;
  
                 }
                 txtEntry.Enabled = false;

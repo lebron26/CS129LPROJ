@@ -18,8 +18,6 @@ namespace GenericVoting
     {
 
         ClassFolder folder;
-        //string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
-        //  static string entryfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
         string username1;
         string type1;
         public frmOrganizer(string name,string username,string type)
@@ -27,7 +25,6 @@ namespace GenericVoting
             InitializeComponent();
             username1 = username;
             type1 = type;
-        //    this.timer(name);
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -72,6 +69,9 @@ namespace GenericVoting
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
+            frmSettings settings = new frmSettings();
+            settings.Show();
+            this.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -79,6 +79,12 @@ namespace GenericVoting
             
        
         }
-        
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
     }
 }

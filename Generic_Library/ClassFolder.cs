@@ -10,22 +10,22 @@ namespace Generic_Library
 
         public string getEntry()
         {
-            return @"C:\Users\Glenn\Source\Repos\CS129LPROJ\Entry\";
+            return @"C:\Users\dell pc\Documents\CS129LGenericVotingSystem\Entry\";
         }
 
         public string getUser()
         {
-            return @"C:\Users\Glenn\Source\Repos\CS129LPROJ\Users\";
+            return @"C:\Users\dell pc\Documents\CS129LGenericVotingSystem\Users\";
         }
 
         public string getContest()
         {
-            return @"C:\Users\Glenn\Source\Repos\CS129LPROJ\Contest\";
+            return @"C:\Users\dell pc\Documents\CS129LGenericVotingSystem\Contest\";
         }
 
         public string getAdmin()
         {
-            return @"C:\Users\Glenn\Source\Repos\CS129LPROJ\Admin\";
+            return @"C:\Users\dell pc\Documents\CS129LGenericVotingSystem\Admin\";
         }
 
         public ClassFolder()

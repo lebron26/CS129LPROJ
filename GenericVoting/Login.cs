@@ -26,8 +26,6 @@ namespace GenericVoting
         bool fa=false;
         Stream stream;
         ClassFolder folder;
-        // string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
-        //  string contestfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
         string contest1;
         string expires;
         public Login()
@@ -45,15 +43,11 @@ namespace GenericVoting
             {
                 Stream stream;
                 if (txtUser.Text == "glenn")
-                { 
-                stream = File.Open(folder.getAdmin() + txtUser.Text + ".xml", FileMode.Open);
-                }else
-                {
+                    stream = File.Open(folder.getAdmin() + txtUser.Text + ".xml", FileMode.Open);
+                else
                     stream = File.Open(folder.getUser() + txtUser.Text + ".xml", FileMode.Open);
-                }
+
                 UserConcrete user = (UserConcrete)serializer.Deserialize(stream);
-
-
                 if (user.password == txtPass.Text)
                 {
                     if (user.type == "Voter")
@@ -67,10 +61,10 @@ namespace GenericVoting
                             sum.TxtVotes.Text = votes.ToString();
                             sum.Show();
                             this.Hide();
-                        }else
-                        {
+                        }
+                        else { 
                             stream.Close();
-                            MessageBox.Show(user.Display());
+                            MessageBox.Show("Welcome "+user.Display());
                             frmVoter voteform = new frmVoter(txtUser.Text);
                             voteform.TxtName.Text = user.firstname + " " + user.lastname;
                             voteform.TxtUser.Text = user.username;
@@ -92,11 +86,9 @@ namespace GenericVoting
                             sum.Show();
                             this.Hide();
                         }
-                        else {
-                            
+                        else
+                        {
                             frmOrganizer organform;
-
-
                             string[] files = Directory.GetFiles(folder.getContest());
                             foreach (var f in files)
                             {
@@ -114,7 +106,7 @@ namespace GenericVoting
                                 else
                                     MessageBox.Show("No Contest");
                             }
-                            MessageBox.Show("Welcome Entry!");
+                            MessageBox.Show("Welcome " + user.Display());
                             getname = user.username;
                             type = user.type;
                             organform = new frmOrganizer(contest1,getname,type);
@@ -164,11 +156,9 @@ namespace GenericVoting
                                 frmContest contest = new frmContest();
                                 contest.Show();
                                 this.Hide();
-
-
                             }
                             else {
-                                MessageBox.Show("Welcome Organizer!");
+                                MessageBox.Show("Welcome " + user.Display());
                                 organform = new frmOrganizer(contest1, getname, type);
                                 organform.LblContestName.Text = contest1;
                                 organform.BtnSetting.Enabled = true;
@@ -192,12 +182,10 @@ namespace GenericVoting
 
         public bool checkfile(bool fa)
         {
-
             if (fa==true)
                 return true;
             else
-                return false; 
-          
+                return false;        
         }
  
         private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -246,12 +234,7 @@ namespace GenericVoting
 
                     stream1.Close();
                 }
-                /*
-                if (ok== true)
-                {
-
-
-                }*/
+           
                 /**/
                 DateTime dt = contest.specificDate;
 

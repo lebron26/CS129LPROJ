@@ -2,7 +2,7 @@
 <UserConcrete xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <username>glenn</username>
   <password>123</password>
-  <firstname>glenn</firstname>
+  <firstname>Glenn</firstname>
   <lastname>Sanchez</lastname>
   <type>Organizer</type>
   <status>false</status>

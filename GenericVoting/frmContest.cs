@@ -18,8 +18,6 @@ namespace GenericVoting
     {
 
         ClassFolder folder;
-        //string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
-
         Contest contest;
         public frmContest()
         {
@@ -38,6 +36,13 @@ namespace GenericVoting
             stream.Close();
             MessageBox.Show("Contest Created");
 
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
             Login login = new Login();
             login.Show();
             this.Close();

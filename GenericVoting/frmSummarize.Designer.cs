@@ -46,10 +46,9 @@ namespace GenericVoting
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(143, 57);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(214, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 23);
+            this.label1.Size = new System.Drawing.Size(135, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Winner is:";
             // 
@@ -57,10 +56,9 @@ namespace GenericVoting
             // 
             this.txtwinner.Enabled = false;
             this.txtwinner.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtwinner.Location = new System.Drawing.Point(234, 56);
-            this.txtwinner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtwinner.Location = new System.Drawing.Point(351, 86);
             this.txtwinner.Name = "txtwinner";
-            this.txtwinner.Size = new System.Drawing.Size(147, 31);
+            this.txtwinner.Size = new System.Drawing.Size(218, 42);
             this.txtwinner.TabIndex = 1;
             // 
             // label2
@@ -68,10 +66,9 @@ namespace GenericVoting
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Corbel", 9F);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(166, 233);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(249, 358);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 14);
+            this.label2.Size = new System.Drawing.Size(98, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Total Votes:";
             // 
@@ -79,10 +76,9 @@ namespace GenericVoting
             // 
             this.txtVotes.Enabled = false;
             this.txtVotes.Font = new System.Drawing.Font("Corbel", 9F);
-            this.txtVotes.Location = new System.Drawing.Point(234, 230);
-            this.txtVotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVotes.Location = new System.Drawing.Point(351, 354);
             this.txtVotes.Name = "txtVotes";
-            this.txtVotes.Size = new System.Drawing.Size(59, 22);
+            this.txtVotes.Size = new System.Drawing.Size(86, 29);
             this.txtVotes.TabIndex = 3;
             // 
             // listView1
@@ -91,10 +87,9 @@ namespace GenericVoting
             this.columnHeader1,
             this.columnHeader2});
             this.listView1.Font = new System.Drawing.Font("Corbel", 9F);
-            this.listView1.Location = new System.Drawing.Point(46, 97);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Location = new System.Drawing.Point(69, 149);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(424, 111);
+            this.listView1.Size = new System.Drawing.Size(634, 169);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -114,10 +109,9 @@ namespace GenericVoting
             this.lblNameContest.AutoSize = true;
             this.lblNameContest.Font = new System.Drawing.Font("Corbel", 26.25F);
             this.lblNameContest.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNameContest.Location = new System.Drawing.Point(129, 3);
-            this.lblNameContest.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNameContest.Location = new System.Drawing.Point(194, 5);
             this.lblNameContest.Name = "lblNameContest";
-            this.lblNameContest.Size = new System.Drawing.Size(254, 42);
+            this.lblNameContest.Size = new System.Drawing.Size(385, 64);
             this.lblNameContest.TabIndex = 5;
             this.lblNameContest.Text = "Result Summary";
             // 
@@ -128,21 +122,20 @@ namespace GenericVoting
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Corbel", 9F);
             this.btnClose.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClose.Location = new System.Drawing.Point(147, 266);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(220, 409);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(234, 43);
+            this.btnClose.Size = new System.Drawing.Size(351, 66);
             this.btnClose.TabIndex = 6;
-            this.btnClose.Text = "TEMPORARY CLOSE";
+            this.btnClose.Text = "Restart Contest";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmSummarize
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(518, 317);
+            this.ClientSize = new System.Drawing.Size(777, 488);
             this.ControlBox = false;
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblNameContest);
@@ -152,7 +145,6 @@ namespace GenericVoting
             this.Controls.Add(this.txtwinner);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmSummarize";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

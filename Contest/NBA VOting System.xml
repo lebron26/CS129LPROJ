@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Contest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <contest>NBA VOting System</contest>
+  <description>asdasfasfasf</description>
+  <specificDate>2017-03-13T00:12:06.8362505+08:00</specificDate>
+  <maxVote>5</maxVote>
+</Contest>

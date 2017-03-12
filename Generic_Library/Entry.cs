@@ -16,20 +16,11 @@ namespace Generic_Library
 
         }
 
-        public bool StatusEntry(string entry,string user)
-        {
-           
-            if (entry== user)
-                return true;
-            else
-                return false;
-        }
         public Entry()
         {
         }
 
-     
-
+      
 
         public override string Display()
         {

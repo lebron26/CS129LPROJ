@@ -49,12 +49,13 @@ namespace GenericVoting
                     if (user.status == true)
                     {
                         item.SubItems.Add("Finished");
+                        item.BackColor = Color.Aqua;
 
                         txtStatus.Text = "Finished";
                     }
                     else
                     {
-
+                        item.BackColor = Color.Beige;
                         item.SubItems.Add("Not Finished");
                         txtStatus.Text = "Not Finished";
                     }
@@ -92,6 +93,8 @@ namespace GenericVoting
                     stream.Close();
                     MessageBox.Show(userconcrete.Display());
                 }
+                lviVoter.Items.Clear();
+                this.get();
             }
         }
 
@@ -105,10 +108,16 @@ namespace GenericVoting
             {
                 if (item.Selected)
                 {
-                   lviVoter.Items.Remove(item);
-                     File.Delete(folder.getUser() + item.SubItems[0].Text + ".xml");
+                    if (txtStatus.Text != "Finished")
+                    {
+                        lviVoter.Items.Remove(item);
+                        File.Delete(folder.getUser() + item.SubItems[0].Text + ".xml");
+                        btnNew.PerformClick();
+                    }
+                    else
+                        MessageBox.Show("Voter is Finished Voting");
                 }
-                else
+                if(!item.Selected)
                     MessageBox.Show("Select Item to Remove");
             }
 

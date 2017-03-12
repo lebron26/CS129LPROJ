@@ -11,8 +11,7 @@ namespace Generic_Library
 {
     public class Voter : UserDecorator
     {
-        private int vote { get; set; }
-        public string entry { get; set; }
+       
         public Voter(User user):base(user)
         {
 
