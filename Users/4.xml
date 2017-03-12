@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<UserConcrete xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <username>4</username>
+  <password>4</password>
+  <firstname>4</firstname>
+  <lastname>4</lastname>
+  <type>Voter</type>
+  <status>true</status>
+  <entry>karley</entry>
+</UserConcrete>
