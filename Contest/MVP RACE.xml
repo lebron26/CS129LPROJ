@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Contest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <contest>MVP RACE</contest>
+  <description>MVP AWARD</description>
+  <specificDate>2017-03-12T17:35:47.6481573+08:00</specificDate>
+  <maxVote>35</maxVote>
+</Contest>

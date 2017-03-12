@@ -36,6 +36,7 @@
             this.datePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnSave = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -90,7 +91,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(227, 252);
+            this.btnSave.Location = new System.Drawing.Point(228, 321);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(176, 58);
             this.btnSave.TabIndex = 7;
@@ -100,17 +101,27 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(511, 228);
+            this.richTextBox1.Location = new System.Drawing.Point(176, 198);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(100, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(424, 96);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(51, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Description:";
             // 
             // frmContest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(749, 432);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.datePicker1);
@@ -136,5 +147,6 @@
         private System.Windows.Forms.DateTimePicker datePicker1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label4;
     }
 }

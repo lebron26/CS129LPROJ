@@ -36,11 +36,11 @@ namespace GenericVoting
             XmlSerializer serialize = new XmlSerializer(typeof(Contest));
             serialize.Serialize(stream, contest);
             stream.Close();
-        
+            MessageBox.Show("Contest Created");
 
-            frmOrganizer frm = new frmOrganizer(txtContest.Text,"","");
-            frm.ShowDialog();
-            this.Hide();
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

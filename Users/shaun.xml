@@ -2,9 +2,8 @@
 <UserConcrete xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <username>shaun</username>
   <password>123</password>
-  <firstname>asldasd</firstname>
-  <lastname>asdas</lastname>
-  <type>Voter</type>
-  <status>true</status>
-  <entry>iloilo</entry>
+  <firstname>shaun</firstname>
+  <lastname>timbol</lastname>
+  <type>Organizer</type>
+  <status>false</status>
 </UserConcrete>

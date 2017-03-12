@@ -16,12 +16,14 @@ namespace GenericVoting
 {
     public partial class Login : Form
     {
+        Contest contest;
         string getname;
         string entryname;
         string namecontest;
         bool ok;
         int votes;
         string type;
+        bool fa=false;
         Stream stream;
         ClassFolder folder;
         // string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
@@ -82,6 +84,7 @@ namespace GenericVoting
                     {
                         if (ok == true)
                         {
+                            stream.Close();
                             frmSummarize sum = new frmSummarize(entryname);
                             sum.LblNameContest.Text = namecontest;
                             sum.Txtwinner.Text = entryname;
@@ -129,6 +132,7 @@ namespace GenericVoting
                     {
                         if (ok == true)
                         {
+                            stream.Close();
                             frmSummarize sum = new frmSummarize(entryname);
                             sum.LblNameContest.Text = namecontest;
                             sum.Txtwinner.Text = entryname;
@@ -136,39 +140,48 @@ namespace GenericVoting
                             sum.Show();
                             this.Hide();
                         }
-                        else {
+                        else
+                        {
                             frmOrganizer organform;
 
 
                             string[] files = Directory.GetFiles(folder.getContest());
+                           
                             foreach (var f in files)
                             {
-                                if (File.Exists(f))
-                                {
-                                    XmlSerializer serializer1 = new XmlSerializer(typeof(Contest));
-                                    Stream conteststream = File.Open(f, FileMode.Open);
-                                    Contest contest = (Contest)serializer1.Deserialize(conteststream);
-                                    
-                                   expires = contest.specificDate.ToLongDateString()+contest.specificDate.ToLongTimeString();
-                                    contest1 = contest.contest;
-                                    conteststream.Close();
-                                }
-                                else
-                                    MessageBox.Show("Create Contest");
+                                XmlSerializer serializer1 = new XmlSerializer(typeof(Contest));
+                                Stream conteststream = File.Open(f, FileMode.Open);
+                                Contest contest = (Contest)serializer1.Deserialize(conteststream);
+
+                                expires = contest.specificDate.ToLongDateString() + contest.specificDate.ToLongTimeString();
+                                contest1 = contest.contest;
+                                conteststream.Close();
+                                fa = true;
+
                             }
-                            MessageBox.Show("Welcome Organizer!");
-                            organform = new frmOrganizer(contest1, getname,type);
-                            organform.LblContestName.Text = contest1;
-                            organform.BtnSetting.Enabled = true;
-                            organform.BtnVoters.Enabled = true;
-                            organform.BtnUsers.Enabled = true;
-                            organform.LblDate.Text = expires;
-                            organform.Show();
-                            this.Hide();
+                            if (!checkfile(fa))
+                            {
+                                frmContest contest = new frmContest();
+                                contest.Show();
+                                this.Hide();
+
+
+                            }
+                            else {
+                                MessageBox.Show("Welcome Organizer!");
+                                organform = new frmOrganizer(contest1, getname, type);
+                                organform.LblContestName.Text = contest1;
+                                organform.BtnSetting.Enabled = true;
+                                organform.BtnVoters.Enabled = true;
+                                organform.BtnUsers.Enabled = true;
+                                organform.LblDate.Text = expires;
+                                organform.Show();
+                                this.Hide();
+                            }
+                        }
+                           
                         }
                     }
-
-                }
                 stream.Close();
             }
             else
@@ -177,6 +190,16 @@ namespace GenericVoting
             }
         }
 
+        public bool checkfile(bool fa)
+        {
+
+            if (fa==true)
+                return true;
+            else
+                return false; 
+          
+        }
+ 
         private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Register reg = new Register();
@@ -200,50 +223,54 @@ namespace GenericVoting
             {
                  stream = File.Open(c, FileMode.Open);
             }
-            Contest contest = (Contest)serializer.Deserialize(stream);
-            /**/
-            foreach (var f in files)
+            if (stream != null)
             {
-                Stream stream1 = File.Open(f, FileMode.Open);
+                contest = (Contest)serializer.Deserialize(stream);
 
-                Entry entry = (Entry)serializer1.Deserialize(stream1);
-
-                if (contest.WinVotes(entry.vote, contest.maxVote) == true)
+                /**/
+                foreach (var f in files)
                 {
-                    ok = contest.WinVotes(entry.vote, contest.maxVote);
-                    entryname = entry.entry;
-                    namecontest = contest.contest;
+                    Stream stream1 = File.Open(f, FileMode.Open);
 
-                    votes = entry.vote;
+                    Entry entry = (Entry)serializer1.Deserialize(stream1);
+
+                    if (contest.WinVotes(entry.vote, contest.maxVote) == true)
+                    {
+                        ok = contest.WinVotes(entry.vote, contest.maxVote);
+                        entryname = entry.entry;
+                        namecontest = contest.contest;
+
+                        votes = entry.vote;
+
+                    }
+
+                    stream1.Close();
+                }
+                /*
+                if (ok== true)
+                {
+
+
+                }*/
+                /**/
+                DateTime dt = contest.specificDate;
+
+                TimeSpan time = new TimeSpan(dt.Ticks);
+
+                if (contest.IsExpired(dt) == false)
+                {
+                    // lblDate.Text = "Expires:\n" + dt.ToLongDateString() + " " + dt.ToLongTimeString();
+                    // MessageBox.Show(dt.ToLongDateString()+" "+ dt.ToLongTimeString());
 
                 }
+                else
+                {
+                    /*   WINNER    */
 
-                stream1.Close();
+                    // MessageBox.Show("Not this time");
+                }
+                stream.Close();
             }
-            /*
-            if (ok== true)
-            {
-
-              
-            }*/
-            /**/
-            DateTime dt = contest.specificDate;
-
-            TimeSpan time = new TimeSpan(dt.Ticks);
-
-            if (contest.IsExpired(dt) == false)
-            {
-               // lblDate.Text = "Expires:\n" + dt.ToLongDateString() + " " + dt.ToLongTimeString();
-                // MessageBox.Show(dt.ToLongDateString()+" "+ dt.ToLongTimeString());
-
-            }
-            else
-            {
-                /*   WINNER    */
-
-                // MessageBox.Show("Not this time");
-            }
-            stream.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
