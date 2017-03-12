@@ -38,7 +38,7 @@ namespace GenericVoting
             stream.Close();
         
 
-            frmOrganizer frm = new frmOrganizer(txtContest.Text);
+            frmOrganizer frm = new frmOrganizer(txtContest.Text,"","");
             frm.ShowDialog();
             this.Hide();
         }

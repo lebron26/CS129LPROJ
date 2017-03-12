@@ -1,4 +1,6 @@
-﻿namespace GenericVoting
+﻿using System.Windows.Forms;
+
+namespace GenericVoting
 {
     partial class EntryForm
     {
@@ -38,6 +40,7 @@
             this.txtEntry = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtDes = new System.Windows.Forms.RichTextBox();
+            this.btnEntry = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,6 +73,7 @@
             this.lviEntry.TabIndex = 2;
             this.lviEntry.UseCompatibleStateImageBehavior = false;
             this.lviEntry.View = System.Windows.Forms.View.Details;
+            this.lviEntry.SelectedIndexChanged += new System.EventHandler(this.lviEntry_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -83,7 +87,7 @@
             // 
             // btnADDEntry
             // 
-            this.btnADDEntry.Location = new System.Drawing.Point(41, 370);
+            this.btnADDEntry.Location = new System.Drawing.Point(83, 370);
             this.btnADDEntry.Name = "btnADDEntry";
             this.btnADDEntry.Size = new System.Drawing.Size(131, 57);
             this.btnADDEntry.TabIndex = 3;
@@ -122,15 +126,26 @@
             // 
             this.txtDes.Location = new System.Drawing.Point(147, 276);
             this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(354, 96);
+            this.txtDes.Size = new System.Drawing.Size(354, 64);
             this.txtDes.TabIndex = 9;
             this.txtDes.Text = "";
+            // 
+            // btnEntry
+            // 
+            this.btnEntry.Location = new System.Drawing.Point(2, 370);
+            this.btnEntry.Name = "btnEntry";
+            this.btnEntry.Size = new System.Drawing.Size(75, 56);
+            this.btnEntry.TabIndex = 10;
+            this.btnEntry.Text = "New Entry";
+            this.btnEntry.UseVisualStyleBackColor = true;
+            this.btnEntry.Click += new System.EventHandler(this.btnEntry_Click);
             // 
             // EntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 439);
+            this.ClientSize = new System.Drawing.Size(578, 439);
+            this.Controls.Add(this.btnEntry);
             this.Controls.Add(this.txtDes);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtEntry);
@@ -158,5 +173,45 @@
         private System.Windows.Forms.TextBox txtEntry;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.RichTextBox txtDes;
+        private System.Windows.Forms.Button btnEntry;
+
+        public Button BtnDeleteEntry
+        {
+            get
+            {
+                return btnDeleteEntry;
+            }
+
+            set
+            {
+                btnDeleteEntry = value;
+            }
+        }
+
+        public Button BtnADDEntry
+        {
+            get
+            {
+                return btnADDEntry;
+            }
+
+            set
+            {
+                btnADDEntry = value;
+            }
+        }
+
+        public Button BtnEntry
+        {
+            get
+            {
+                return btnEntry;
+            }
+
+            set
+            {
+                btnEntry = value;
+            }
+        }
     }
 }

@@ -20,10 +20,13 @@ namespace GenericVoting
         ClassFolder folder;
         //string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
         //  static string entryfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
-      
-        public frmOrganizer(string name)
+        string username1;
+        string type1;
+        public frmOrganizer(string name,string username,string type)
         {
             InitializeComponent();
+            username1 = username;
+            type1 = type;
         //    this.timer(name);
         }
 
@@ -43,7 +46,19 @@ namespace GenericVoting
 
         private void btnEntry_Click(object sender, EventArgs e)
         {
-            EntryForm entry = new EntryForm();
+            EntryForm entry = new EntryForm(username1);
+            if (type1 == "Entry")
+            {
+                entry.BtnDeleteEntry.Enabled = false;
+                entry.BtnADDEntry.Enabled = true;
+                entry.BtnEntry.Enabled = true;
+            }
+            else
+            {
+                entry.BtnADDEntry.Enabled = false;
+                entry.BtnEntry.Enabled = false;
+                entry.BtnDeleteEntry.Enabled = true;
+            }
             entry.ShowDialog();
             entry.Hide();
         }

@@ -40,11 +40,11 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lviUsers = new System.Windows.Forms.ListView();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -63,7 +63,6 @@
             this.cmbSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSelect.FormattingEnabled = true;
             this.cmbSelect.Items.AddRange(new object[] {
-            "",
             "Entry",
             "Organizer"});
             this.cmbSelect.Location = new System.Drawing.Point(293, 272);
@@ -151,22 +150,14 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.lviUsers.FullRowSelect = true;
             this.lviUsers.Location = new System.Drawing.Point(43, 27);
             this.lviUsers.Name = "lviUsers";
             this.lviUsers.Size = new System.Drawing.Size(529, 133);
             this.lviUsers.TabIndex = 11;
             this.lviUsers.UseCompatibleStateImageBehavior = false;
             this.lviUsers.View = System.Windows.Forms.View.Details;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(462, 325);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(158, 107);
-            this.btnCancel.TabIndex = 12;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.lviUsers.SelectedIndexChanged += new System.EventHandler(this.lviUsers_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -187,6 +178,16 @@
             // 
             this.columnHeader4.Text = "Type";
             this.columnHeader4.Width = 86;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(462, 325);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(158, 107);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnNew
             // 

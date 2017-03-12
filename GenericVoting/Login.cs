@@ -16,15 +16,18 @@ namespace GenericVoting
 {
     public partial class Login : Form
     {
+        string getname;
         string entryname;
         string namecontest;
         bool ok;
         int votes;
+        string type;
         Stream stream;
         ClassFolder folder;
         // string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Users\";
         //  string contestfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
         string contest1;
+        string expires;
         public Login()
         {
             InitializeComponent();
@@ -87,6 +90,7 @@ namespace GenericVoting
                             this.Hide();
                         }
                         else {
+                            
                             frmOrganizer organform;
 
 
@@ -99,6 +103,8 @@ namespace GenericVoting
                                     Stream conteststream = File.Open(f, FileMode.Open);
                                     Contest contest = (Contest)serializer1.Deserialize(conteststream);
 
+
+                                    expires = contest.specificDate.ToLongDateString() + contest.specificDate.ToLongTimeString();
                                     contest1 = contest.contest;
                                     conteststream.Close();
                                 }
@@ -106,9 +112,16 @@ namespace GenericVoting
                                     MessageBox.Show("No Contest");
                             }
                             MessageBox.Show("Welcome Entry!");
-                            organform = new frmOrganizer(contest1);
+                            getname = user.username;
+                            type = user.type;
+                            organform = new frmOrganizer(contest1,getname,type);
+                          
                             organform.LblContestName.Text = contest1;
-
+                            organform.BtnSetting.Enabled = false;
+                            organform.BtnVoters.Enabled = false;
+                            organform.BtnUsers.Enabled = false;
+                     
+                            organform.LblDate.Text = expires;
                             organform.Show();
                         }
                     }
@@ -135,7 +148,8 @@ namespace GenericVoting
                                     XmlSerializer serializer1 = new XmlSerializer(typeof(Contest));
                                     Stream conteststream = File.Open(f, FileMode.Open);
                                     Contest contest = (Contest)serializer1.Deserialize(conteststream);
-
+                                    
+                                   expires = contest.specificDate.ToLongDateString()+contest.specificDate.ToLongTimeString();
                                     contest1 = contest.contest;
                                     conteststream.Close();
                                 }
@@ -143,9 +157,12 @@ namespace GenericVoting
                                     MessageBox.Show("Create Contest");
                             }
                             MessageBox.Show("Welcome Organizer!");
-                            organform = new frmOrganizer(contest1);
+                            organform = new frmOrganizer(contest1, getname,type);
                             organform.LblContestName.Text = contest1;
-
+                            organform.BtnSetting.Enabled = true;
+                            organform.BtnVoters.Enabled = true;
+                            organform.BtnUsers.Enabled = true;
+                            organform.LblDate.Text = expires;
                             organform.Show();
                             this.Hide();
                         }

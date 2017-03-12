@@ -130,5 +130,31 @@ namespace GenericVoting
             this.Dispose();
             this.Close();
         }
+
+        private void lviUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lviUsers.SelectedItems.Count == 1) // handle it some other way if you have multiselect.
+            {
+                ListViewItem item = lviUsers.SelectedItems[0];
+                if (item != null)
+                {
+                    txtUser.Text = item.SubItems[0].Text;
+                    txtUser.Enabled = false;
+                    txtPass.Text = item.SubItems[1].Text;
+                    txtPass.Enabled = false;
+
+                    string[] size = item.SubItems[2].Text.Split(' ');
+
+                    txtFirst.Text = size[0];
+                    txtFirst.Enabled = false;
+                    txtLast.Text = size[1];
+                    txtLast.Enabled = false;
+                    cmbSelect.Text = item.SubItems[3].Text;
+
+
+                    // = item.SubItems[4].Text;
+                }
+            }
+        }
     }
 }

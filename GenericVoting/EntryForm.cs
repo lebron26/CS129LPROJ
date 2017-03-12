@@ -11,17 +11,20 @@ using System.IO;
 using System.Xml.Serialization;
 using Generic_Library;
 using System.Xml.Linq;
+using System.Xml;
 
 namespace GenericVoting
 {
     public partial class EntryForm : Form
     {
         public ClassFolder folder;
-      //  string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
-
-        public EntryForm()
+        //  string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
+        string getname;
+        string userstatus;
+        public EntryForm(string name)
         {
             InitializeComponent();
+            getname = name;
             this.get();
         }
         private void get()
@@ -48,7 +51,7 @@ namespace GenericVoting
         private void btnADDEntry_Click(object sender, EventArgs e)
         {
             folder = new ClassFolder();
-            if (txtEntry.Text == "" || txtDes.Text=="")
+            if (txtEntry.Text == "" || txtDes.Text == "")
                 MessageBox.Show("Please complete all the fields required to register.");
             else {
 
@@ -57,16 +60,58 @@ namespace GenericVoting
                     MessageBox.Show("This Entry is already registered. Please try again.");
                 }
                 else
-                {
+                {/*
+                    Stream stream = File.Create(folder.getUser() + getname + ".xml");
+                    XmlSerializer serialize = new XmlSerializer(typeof(UserConcrete));
+                    serialize.Serialize(stream, User);
+                    */
+                    XmlSerializer serializer2 = new XmlSerializer(typeof(UserConcrete));
+                    Stream stream2 = File.Open(folder.getUser() +getname + ".xml", FileMode.Open);
+
+                    UserConcrete user = (UserConcrete)serializer2.Deserialize(stream2);
+
                     Entry entry = new Entry();
                     entry.entry = txtEntry.Text;
                     entry.description = txtDes.Text;
-                    
-                    Stream stream = File.Create(folder.getEntry() + entry.entry + ".xml");
-                    XmlSerializer serialize = new XmlSerializer(typeof(Entry));
-                    serialize.Serialize(stream, entry);
-                     stream.Close();
-                   }      
+              
+                    entry.entryuser = getname;
+
+                      if (!user.status)
+                    {
+                        Stream stream = File.Create(folder.getEntry() + entry.entry + ".xml");
+                        XmlSerializer serialize = new XmlSerializer(typeof(Entry));
+                        serialize.Serialize(stream, entry);
+                        stream.Close();
+                        foreach (ListViewItem item in lviEntry.Items)
+                        {
+                            item.SubItems[0].Text = txtEntry.Text;
+                            item.SubItems[1].Text = txtDes.Text;
+                        }
+
+                        /**/
+                     
+                        userstatus = "true";
+
+                        XmlDocument xmlDoc = new XmlDocument();
+
+                        stream2.Position = 0;
+                        xmlDoc.Load(stream2);
+                       
+                        XmlNode node = xmlDoc.SelectSingleNode("/UserConcrete/status") as XmlElement;
+                        if (node != null)
+
+                            node.InnerText = userstatus;
+                        stream2.Position = 0;
+                        stream2.SetLength(0);
+                        xmlDoc.Save(stream2);
+                        stream2.Close();
+
+                    }
+                    else
+                        MessageBox.Show("Entry should be 1");
+
+                    stream2.Close();
+                }
             }
         }
 
@@ -92,6 +137,33 @@ namespace GenericVoting
         {
             this.Dispose();
             this.Close();
+        }
+
+        private void lviEntry_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lviEntry.SelectedItems.Count == 1) // handle it some other way if you have multiselect.
+            {
+                ListViewItem item = lviEntry.SelectedItems[0];
+                if (item != null)
+                {
+                   txtEntry.Text = item.SubItems[0].Text;
+                   txtEntry.Enabled = false;
+                   txtDes.Text = item.SubItems[1].Text;
+                   txtDes.Enabled = false;
+                }
+            }
+        }
+
+        private void btnEntry_Click(object sender, EventArgs e)
+        {
+
+            txtEntry.Enabled = true;
+             txtDes.Enabled = true;
+
+            txtEntry.Text=null;
+            txtDes.Text=null;
+
+
         }
     }
 }

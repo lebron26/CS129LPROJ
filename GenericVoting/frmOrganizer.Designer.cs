@@ -149,5 +149,70 @@ namespace GenericVoting
                 lblContestName = value;
             }
         }
+
+        public Button BtnVoters
+        {
+            get
+            {
+                return btnVoters;
+            }
+
+            set
+            {
+                btnVoters = value;
+            }
+        }
+
+        public Button BtnSetting
+        {
+            get
+            {
+                return btnSetting;
+            }
+
+            set
+            {
+                btnSetting = value;
+            }
+        }
+
+        public Label LblDate
+        {
+            get
+            {
+                return lblDate;
+            }
+
+            set
+            {
+                lblDate = value;
+            }
+        }
+
+        public Button BtnEntry
+        {
+            get
+            {
+                return btnEntry;
+            }
+
+            set
+            {
+                btnEntry = value;
+            }
+        }
+
+        public Button BtnUsers
+        {
+            get
+            {
+                return btnUsers;
+            }
+
+            set
+            {
+                btnUsers = value;
+            }
+        }
     }
 }
