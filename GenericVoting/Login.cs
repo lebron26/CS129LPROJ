@@ -273,5 +273,18 @@ namespace GenericVoting
                 txtPass.Text = "Password";
             }
         }
+
+        private void Login_Enter(object sender, EventArgs e)
+        {
+            if (txtUser.Text == " ")
+            {
+                txtUser.Text = "Username";
+            }
+
+            if (txtPass.Text == " ")
+            {
+                txtPass.Text = "Password";
+            }
+        }
     }
 }
