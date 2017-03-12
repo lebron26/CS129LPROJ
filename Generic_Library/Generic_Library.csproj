@@ -46,7 +46,6 @@
     <Compile Include="ClassFolder.cs" />
     <Compile Include="Organizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Server.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserConcrete.cs" />
     <Compile Include="UserDecorator.cs" />

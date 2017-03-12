@@ -37,7 +37,6 @@ namespace GenericVoting
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblNameContest = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,7 +44,7 @@ namespace GenericVoting
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 93);
+            this.label1.Location = new System.Drawing.Point(306, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 0;
@@ -54,24 +53,24 @@ namespace GenericVoting
             // txtwinner
             // 
             this.txtwinner.Enabled = false;
-            this.txtwinner.Location = new System.Drawing.Point(135, 87);
+            this.txtwinner.Location = new System.Drawing.Point(435, 83);
             this.txtwinner.Name = "txtwinner";
-            this.txtwinner.Size = new System.Drawing.Size(100, 26);
+            this.txtwinner.Size = new System.Drawing.Size(165, 26);
             this.txtwinner.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 131);
+            this.label2.Location = new System.Drawing.Point(316, 347);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Votes:";
+            this.label2.Text = "Total Votes:";
             // 
             // txtVotes
             // 
             this.txtVotes.Enabled = false;
-            this.txtVotes.Location = new System.Drawing.Point(135, 125);
+            this.txtVotes.Location = new System.Drawing.Point(435, 341);
             this.txtVotes.Name = "txtVotes";
             this.txtVotes.Size = new System.Drawing.Size(100, 26);
             this.txtVotes.TabIndex = 3;
@@ -80,9 +79,8 @@ namespace GenericVoting
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.Location = new System.Drawing.Point(40, 184);
+            this.columnHeader2});
+            this.listView1.Location = new System.Drawing.Point(69, 141);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(656, 169);
             this.listView1.TabIndex = 4;
@@ -91,18 +89,13 @@ namespace GenericVoting
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Entry";
+            this.columnHeader1.Text = "Voter";
             this.columnHeader1.Width = 194;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Description";
+            this.columnHeader2.Text = "Full Name:";
             this.columnHeader2.Width = 223;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Votes";
-            this.columnHeader3.Width = 96;
             // 
             // lblNameContest
             // 
@@ -116,7 +109,7 @@ namespace GenericVoting
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(212, 360);
+            this.btnClose.Location = new System.Drawing.Point(220, 410);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(351, 66);
             this.btnClose.TabIndex = 6;
@@ -128,7 +121,7 @@ namespace GenericVoting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 438);
+            this.ClientSize = new System.Drawing.Size(926, 488);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblNameContest);
             this.Controls.Add(this.listView1);
@@ -152,7 +145,6 @@ namespace GenericVoting
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label lblNameContest;
         private Button btnClose;
 

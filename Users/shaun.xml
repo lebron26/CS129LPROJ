@@ -5,6 +5,6 @@
   <firstname>asldasd</firstname>
   <lastname>asdas</lastname>
   <type>Voter</type>
-  <status>false</status>
+  <status>true</status>
   <entry>iloilo</entry>
 </UserConcrete>

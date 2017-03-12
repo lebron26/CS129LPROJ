@@ -22,7 +22,10 @@ namespace Generic_Library
         {
             return @"C:\Users\dell pc\Documents\CS129LGenericVotingSystem\Contest\";
         }
-
+        public string getAdmin()
+        {
+            return @"C:\Users\dell pc\Documents\CS129LGenericVotingSystem\Admin\";
+        }
         public ClassFolder()
         { }
     }

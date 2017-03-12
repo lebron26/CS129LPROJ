@@ -19,12 +19,12 @@ namespace GenericVoting
 
         ClassFolder folder;
         //string folder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Contest\";
-      //  static string entryfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
-
+        //  static string entryfolder = @"C:\Users\dell pc\Documents\Visual Studio 2015\Projects\GenericVoting\Entry\";
+      
         public frmOrganizer(string name)
         {
             InitializeComponent();
-            this.timer(name);
+        //    this.timer(name);
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -64,55 +64,6 @@ namespace GenericVoting
             
        
         }
-        public void timer(string name)
-        {
-            folder = new ClassFolder();
-            XmlSerializer serializer = new XmlSerializer(typeof(Contest));
-
-            Stream stream = File.Open(folder.getContest() + name+".xml", FileMode.Open);
-            Contest contest = (Contest)serializer.Deserialize(stream);
-
-            string[] files = Directory.GetFiles(folder.getEntry());
-            /**/
-            foreach (var f in files)
-            {
-                XmlSerializer serializer1 = new XmlSerializer(typeof(Entry));
-
-                Stream stream1 = File.Open(f,FileMode.Open);
-                Entry entry = (Entry)serializer1.Deserialize(stream1);
-             
-                if (contest.WinVotes(entry.vote,contest.maxVote) ==true)
-                {
-                    frmSummarize sum = new frmSummarize();
-                    sum.LblNameContest.Text = contest.contest;
-                    sum.Txtwinner.Text = entry.entry;
-                    sum.TxtVotes.Text = entry.vote.ToString();
-                    sum.ShowDialog();
-                    this.Dispose();
-                    this.Close();
-                }
-                
-               stream1.Close();
-            }
-
-            /**/
-            DateTime dt = contest.specificDate;
-
-            TimeSpan time = new TimeSpan(dt.Ticks);
-
-            if (contest.IsExpired(dt) == false)
-            {
-                lblDate.Text = "Expires:\n" + dt.ToLongDateString() + " " + dt.ToLongTimeString();
-                // MessageBox.Show(dt.ToLongDateString()+" "+ dt.ToLongTimeString());
-
-            }
-            else
-            {
-                /*   WINNER    */
-
-                // MessageBox.Show("Not this time");
-            }
-            stream.Close();
-        }
+        
     }
 }
