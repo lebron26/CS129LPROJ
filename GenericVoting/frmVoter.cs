@@ -65,10 +65,12 @@ namespace GenericVoting
                         xmlDoc.Load(stream);
                         string status = user.status.ToString().ToLower();
                         XmlNode node = xmlDoc.SelectSingleNode("/UserConcrete/status") as XmlElement;
-                        if(node!=null)
+                        XmlNode node1 = xmlDoc.SelectSingleNode("/UserConcrete/entry") as XmlElement;
+                        if (node!=null)
 
                         node.InnerText = status;
-                      
+                 //Enttry
+                          node1.InnerText = user.entry;
                         stream.Position = 0;
                         stream.SetLength(0);
                         
