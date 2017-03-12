@@ -53,7 +53,7 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(99, 42);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -65,7 +65,6 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(140, 24);
             this.txtUser.TabIndex = 1;
-            this.txtUser.Text = "\r";
             // 
             // txtPass
             // 
@@ -98,7 +97,7 @@
             this.button1.Location = new System.Drawing.Point(107, 271);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 25);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Exit";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -130,12 +129,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(291, 299);
             this.ControlBox = false;
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.userLogin);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.btnLogin);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
