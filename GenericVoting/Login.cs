@@ -35,7 +35,7 @@ namespace GenericVoting
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {
+        {            
             folder= new ClassFolder();
             XmlSerializer serializer = new XmlSerializer(typeof(UserConcrete));
 
