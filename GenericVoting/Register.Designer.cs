@@ -180,10 +180,10 @@
             this.columnHeader4});
             this.lviUsers.Font = new System.Drawing.Font("Corbel", 9F);
             this.lviUsers.FullRowSelect = true;
-            this.lviUsers.Location = new System.Drawing.Point(27, 66);
+            this.lviUsers.Location = new System.Drawing.Point(24, 65);
             this.lviUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lviUsers.Name = "lviUsers";
-            this.lviUsers.Size = new System.Drawing.Size(440, 112);
+            this.lviUsers.Size = new System.Drawing.Size(454, 112);
             this.lviUsers.TabIndex = 11;
             this.lviUsers.UseCompatibleStateImageBehavior = false;
             this.lviUsers.View = System.Windows.Forms.View.Details;
@@ -255,7 +255,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(495, 352);
+            this.ClientSize = new System.Drawing.Size(498, 352);
             this.ControlBox = false;
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnNew);
