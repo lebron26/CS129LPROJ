@@ -235,5 +235,43 @@ namespace GenericVoting
         {
             this.Close();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txtUser.Text = "Username";
+            txtPass.Text = "Password";
+        }
+
+        private void txtUser_Enter(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "Username")
+            {
+                txtUser.Text = " ";
+            }            
+        }
+
+        private void txtPass_Enter(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "Password")
+            {
+                txtPass.Text = " ";
+            }
+        }
+
+        private void txtUser_Leave(object sender, EventArgs e)
+        {
+            if (txtUser.Text == " ")
+            {
+                txtUser.Text = "Username";
+            }
+        }
+
+        private void txtPass_Leave(object sender, EventArgs e)
+        {
+            if (txtPass.Text == " ")
+            {
+                txtPass.Text = "Password";
+            }
+        }
     }
 }
