@@ -47,6 +47,7 @@
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.txtLast = new System.Windows.Forms.TextBox();
             this.btnNew = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lviVoter
@@ -56,10 +57,12 @@
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5});
+            this.lviVoter.Font = new System.Drawing.Font("Corbel", 9F);
             this.lviVoter.FullRowSelect = true;
-            this.lviVoter.Location = new System.Drawing.Point(30, 33);
+            this.lviVoter.Location = new System.Drawing.Point(17, 76);
+            this.lviVoter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lviVoter.Name = "lviVoter";
-            this.lviVoter.Size = new System.Drawing.Size(597, 147);
+            this.lviVoter.Size = new System.Drawing.Size(399, 97);
             this.lviVoter.TabIndex = 0;
             this.lviVoter.UseCompatibleStateImageBehavior = false;
             this.lviVoter.View = System.Windows.Forms.View.Details;
@@ -87,129 +90,187 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 199);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(14, 184);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 236);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(14, 213);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 20);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(375, 192);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(247, 184);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 20);
+            this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "First Name:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(375, 229);
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(246, 213);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 20);
+            this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Last Name:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(405, 271);
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(267, 242);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Status:";
             // 
             // txtStatus
             // 
             this.txtStatus.Enabled = false;
-            this.txtStatus.Location = new System.Drawing.Point(496, 264);
+            this.txtStatus.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtStatus.Location = new System.Drawing.Point(312, 239);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(100, 26);
+            this.txtStatus.Size = new System.Drawing.Size(104, 22);
             this.txtStatus.TabIndex = 6;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(196, 344);
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.Location = new System.Drawing.Point(123, 279);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(127, 43);
+            this.btnAdd.Size = new System.Drawing.Size(85, 28);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add Voter";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(329, 344);
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDelete.Location = new System.Drawing.Point(227, 279);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(127, 43);
+            this.btnDelete.Size = new System.Drawing.Size(85, 28);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete Voter";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(484, 344);
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.Location = new System.Drawing.Point(331, 279);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(127, 43);
+            this.btnCancel.Size = new System.Drawing.Size(85, 28);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(140, 192);
+            this.txtUser.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtUser.Location = new System.Drawing.Point(76, 181);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(100, 26);
+            this.txtUser.Size = new System.Drawing.Size(68, 22);
             this.txtUser.TabIndex = 10;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(140, 229);
+            this.txtPass.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtPass.Location = new System.Drawing.Point(76, 209);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(100, 26);
+            this.txtPass.Size = new System.Drawing.Size(68, 22);
             this.txtPass.TabIndex = 11;
             // 
             // txtFirst
             // 
-            this.txtFirst.Location = new System.Drawing.Point(496, 186);
+            this.txtFirst.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtFirst.Location = new System.Drawing.Point(312, 180);
+            this.txtFirst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(100, 26);
+            this.txtFirst.Size = new System.Drawing.Size(104, 22);
             this.txtFirst.TabIndex = 12;
             // 
             // txtLast
             // 
-            this.txtLast.Location = new System.Drawing.Point(496, 223);
+            this.txtLast.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtLast.Location = new System.Drawing.Point(312, 209);
+            this.txtLast.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLast.Name = "txtLast";
-            this.txtLast.Size = new System.Drawing.Size(100, 26);
+            this.txtLast.Size = new System.Drawing.Size(104, 22);
             this.txtLast.TabIndex = 13;
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(50, 344);
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnNew.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnNew.Location = new System.Drawing.Point(17, 279);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(127, 43);
+            this.btnNew.Size = new System.Drawing.Size(85, 28);
             this.btnNew.TabIndex = 14;
             this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Corbel", 26.25F);
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(108, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(220, 42);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Manage Voter";
             // 
             // ManageVoter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 433);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(437, 330);
+            this.ControlBox = false;
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.txtLast);
             this.Controls.Add(this.txtFirst);
@@ -225,8 +286,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lviVoter);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManageVoter";
-            this.Text = "ManageVoter";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +317,6 @@
         private System.Windows.Forms.TextBox txtFirst;
         private System.Windows.Forms.TextBox txtLast;
         private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Label label6;
     }
 }
