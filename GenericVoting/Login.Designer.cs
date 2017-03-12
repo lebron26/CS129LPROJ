@@ -49,7 +49,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Corbel", 9F);
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLogin.Location = new System.Drawing.Point(98, 200);
+            this.btnLogin.Location = new System.Drawing.Point(97, 221);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(99, 42);
@@ -60,7 +60,7 @@
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Corbel", 10F);
-            this.txtUser.Location = new System.Drawing.Point(91, 117);
+            this.txtUser.Location = new System.Drawing.Point(89, 117);
             this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(140, 24);
@@ -73,7 +73,7 @@
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Corbel", 10F);
-            this.txtPass.Location = new System.Drawing.Point(91, 147);
+            this.txtPass.Location = new System.Drawing.Point(89, 147);
             this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(140, 24);
@@ -113,7 +113,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(67, 117);
+            this.pictureBox1.Location = new System.Drawing.Point(65, 117);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(26, 24);
             this.pictureBox1.TabIndex = 7;
@@ -123,7 +123,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(67, 147);
+            this.pictureBox2.Location = new System.Drawing.Point(65, 147);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 24);
             this.pictureBox2.TabIndex = 8;

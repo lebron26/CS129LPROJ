@@ -278,15 +278,7 @@ namespace GenericVoting
 
         private void Login_Click(object sender, EventArgs e)
         {
-            //if (txtUser.Text == " ")
-            //{
-            //    txtUser.Text = "Username";
-            //}
-
-            //if (txtPass.Text == " ")
-            //{
-            //    txtPass.Text = "Password";
-            //}
+            
         }
     }
 }
