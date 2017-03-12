@@ -28,7 +28,7 @@ namespace GenericVoting
         public Login()
         {
             InitializeComponent();
-            this.timer();
+            this.timer();            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -170,8 +170,6 @@ namespace GenericVoting
         {
             folder = new ClassFolder();
 
-
-
             string[] files = Directory.GetFiles(folder.getEntry());
 
             string[] contestfiles = Directory.GetFiles(folder.getContest());
@@ -238,8 +236,12 @@ namespace GenericVoting
 
         private void Login_Load(object sender, EventArgs e)
         {
-            txtUser.Text = "Username";
-            txtPass.Text = "Password";
+            //if (txtUser.Text == " " && txtPass.Text == " ")
+            //{
+            //    txtUser.Text = "Username";
+            //    txtPass.Text = "Password";
+            //}
+           
         }
 
         private void txtUser_Enter(object sender, EventArgs e)
@@ -274,17 +276,17 @@ namespace GenericVoting
             }
         }
 
-        private void Login_Enter(object sender, EventArgs e)
+        private void Login_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text == " ")
-            {
-                txtUser.Text = "Username";
-            }
+            //if (txtUser.Text == " ")
+            //{
+            //    txtUser.Text = "Username";
+            //}
 
-            if (txtPass.Text == " ")
-            {
-                txtPass.Text = "Password";
-            }
+            //if (txtPass.Text == " ")
+            //{
+            //    txtPass.Text = "Password";
+            //}
         }
     }
 }
