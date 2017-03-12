@@ -65,10 +65,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(140, 24);
             this.txtUser.TabIndex = 1;
-            this.txtUser.Text = "\r\n";
-            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
-            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
+            this.txtUser.Text = "\r";
             // 
             // txtPass
             // 
@@ -78,9 +75,6 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(140, 24);
             this.txtPass.TabIndex = 2;
-            this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
-            this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // userLogin
             // 
@@ -149,8 +143,6 @@
             this.Name = "Login";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Login_Load);
-            this.Click += new System.EventHandler(this.Login_Click);
             ((System.ComponentModel.ISupportInitialize)(this.userLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
