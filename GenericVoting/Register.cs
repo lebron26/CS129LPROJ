@@ -58,7 +58,7 @@ namespace GenericVoting
         private void btnAdd_Click(object sender, EventArgs e)
         {
             folder = new ClassFolder();
-            if (txtFirst.Text == "" || txtLast.Text == "" || txtUser.Text == "" || txtPass.Text == "")
+            if (txtFirst.Text == "" || txtLast.Text == "" || txtUser.Text == "" || txtPass.Text == ""||cmbSelect.SelectedIndex==-1)
                 MessageBox.Show("Please complete all the fields required to register.");
             else {
                 string combo = cmbSelect.SelectedItem.ToString();
