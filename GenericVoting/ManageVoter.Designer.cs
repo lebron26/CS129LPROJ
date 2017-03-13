@@ -57,10 +57,10 @@
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5});
-            this.lviVoter.Font = new System.Drawing.Font("Corbel", 9F);
+            this.lviVoter.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.lviVoter.FullRowSelect = true;
             this.lviVoter.Location = new System.Drawing.Point(17, 76);
-            this.lviVoter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lviVoter.Margin = new System.Windows.Forms.Padding(2);
             this.lviVoter.Name = "lviVoter";
             this.lviVoter.Size = new System.Drawing.Size(399, 97);
             this.lviVoter.TabIndex = 0;
@@ -150,11 +150,11 @@
             // txtStatus
             // 
             this.txtStatus.Enabled = false;
-            this.txtStatus.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtStatus.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.txtStatus.Location = new System.Drawing.Point(312, 239);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(104, 22);
+            this.txtStatus.Size = new System.Drawing.Size(104, 23);
             this.txtStatus.TabIndex = 6;
             // 
             // btnAdd
@@ -162,10 +162,10 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnAdd.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAdd.Location = new System.Drawing.Point(123, 279);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 28);
             this.btnAdd.TabIndex = 7;
@@ -178,10 +178,10 @@
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnDelete.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDelete.Location = new System.Drawing.Point(227, 279);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 28);
             this.btnDelete.TabIndex = 8;
@@ -194,10 +194,10 @@
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnCancel.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.btnCancel.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCancel.Location = new System.Drawing.Point(331, 279);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(85, 28);
             this.btnCancel.TabIndex = 9;
@@ -207,38 +207,38 @@
             // 
             // txtUser
             // 
-            this.txtUser.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtUser.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.txtUser.Location = new System.Drawing.Point(76, 181);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(68, 22);
+            this.txtUser.Size = new System.Drawing.Size(68, 23);
             this.txtUser.TabIndex = 10;
             // 
             // txtPass
             // 
-            this.txtPass.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtPass.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.txtPass.Location = new System.Drawing.Point(76, 209);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(68, 22);
+            this.txtPass.Size = new System.Drawing.Size(68, 23);
             this.txtPass.TabIndex = 11;
             // 
             // txtFirst
             // 
-            this.txtFirst.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtFirst.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.txtFirst.Location = new System.Drawing.Point(312, 180);
-            this.txtFirst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFirst.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(104, 22);
+            this.txtFirst.Size = new System.Drawing.Size(104, 23);
             this.txtFirst.TabIndex = 12;
             // 
             // txtLast
             // 
-            this.txtLast.Font = new System.Drawing.Font("Corbel", 9F);
+            this.txtLast.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.txtLast.Location = new System.Drawing.Point(312, 209);
-            this.txtLast.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLast.Margin = new System.Windows.Forms.Padding(2);
             this.txtLast.Name = "txtLast";
-            this.txtLast.Size = new System.Drawing.Size(104, 22);
+            this.txtLast.Size = new System.Drawing.Size(104, 23);
             this.txtLast.TabIndex = 13;
             // 
             // btnNew
@@ -246,10 +246,10 @@
             this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.btnNew.FlatAppearance.BorderSize = 0;
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnNew.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.btnNew.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNew.Location = new System.Drawing.Point(17, 279);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(2);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(85, 28);
             this.btnNew.TabIndex = 14;
@@ -292,7 +292,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lviVoter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManageVoter";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

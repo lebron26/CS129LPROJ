@@ -45,11 +45,12 @@ namespace GenericVoting
             this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.btnUsers.FlatAppearance.BorderSize = 0;
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnUsers.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.btnUsers.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUsers.Location = new System.Drawing.Point(46, 155);
+            this.btnUsers.Location = new System.Drawing.Point(31, 101);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(219, 89);
+            this.btnUsers.Size = new System.Drawing.Size(146, 58);
             this.btnUsers.TabIndex = 0;
             this.btnUsers.Text = "Users";
             this.btnUsers.UseVisualStyleBackColor = false;
@@ -60,11 +61,12 @@ namespace GenericVoting
             this.btnVoters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.btnVoters.FlatAppearance.BorderSize = 0;
             this.btnVoters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoters.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnVoters.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.btnVoters.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVoters.Location = new System.Drawing.Point(279, 257);
+            this.btnVoters.Location = new System.Drawing.Point(186, 167);
+            this.btnVoters.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVoters.Name = "btnVoters";
-            this.btnVoters.Size = new System.Drawing.Size(219, 89);
+            this.btnVoters.Size = new System.Drawing.Size(146, 58);
             this.btnVoters.TabIndex = 1;
             this.btnVoters.Text = "Voter";
             this.btnVoters.UseVisualStyleBackColor = false;
@@ -75,11 +77,12 @@ namespace GenericVoting
             this.btnEntry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.btnEntry.FlatAppearance.BorderSize = 0;
             this.btnEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntry.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnEntry.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.btnEntry.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEntry.Location = new System.Drawing.Point(46, 257);
+            this.btnEntry.Location = new System.Drawing.Point(31, 167);
+            this.btnEntry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEntry.Name = "btnEntry";
-            this.btnEntry.Size = new System.Drawing.Size(219, 89);
+            this.btnEntry.Size = new System.Drawing.Size(146, 58);
             this.btnEntry.TabIndex = 2;
             this.btnEntry.Text = "Entry";
             this.btnEntry.UseVisualStyleBackColor = false;
@@ -90,11 +93,12 @@ namespace GenericVoting
             this.btnResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.btnResults.FlatAppearance.BorderSize = 0;
             this.btnResults.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResults.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnResults.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.btnResults.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnResults.Location = new System.Drawing.Point(279, 155);
+            this.btnResults.Location = new System.Drawing.Point(186, 101);
+            this.btnResults.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnResults.Name = "btnResults";
-            this.btnResults.Size = new System.Drawing.Size(219, 89);
+            this.btnResults.Size = new System.Drawing.Size(146, 58);
             this.btnResults.TabIndex = 3;
             this.btnResults.Text = "Results";
             this.btnResults.UseVisualStyleBackColor = false;
@@ -105,11 +109,12 @@ namespace GenericVoting
             this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Corbel", 9F);
+            this.btnSetting.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.btnSetting.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSetting.Location = new System.Drawing.Point(46, 360);
+            this.btnSetting.Location = new System.Drawing.Point(31, 234);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(219, 89);
+            this.btnSetting.Size = new System.Drawing.Size(146, 58);
             this.btnSetting.TabIndex = 4;
             this.btnSetting.Text = "Settings";
             this.btnSetting.UseVisualStyleBackColor = false;
@@ -120,39 +125,47 @@ namespace GenericVoting
             this.lblContestName.AutoSize = true;
             this.lblContestName.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContestName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblContestName.Location = new System.Drawing.Point(192, 20);
+            this.lblContestName.Location = new System.Drawing.Point(128, 13);
+            this.lblContestName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContestName.Name = "lblContestName";
-            this.lblContestName.Size = new System.Drawing.Size(202, 39);
+            this.lblContestName.Size = new System.Drawing.Size(130, 26);
             this.lblContestName.TabIndex = 5;
             this.lblContestName.Text = "ContestName";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Corbel", 9F);
+            this.lblDate.Font = new System.Drawing.Font("Corbel", 9.75F);
             this.lblDate.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDate.Location = new System.Drawing.Point(135, 83);
+            this.lblDate.Location = new System.Drawing.Point(90, 54);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(46, 22);
+            this.lblDate.Size = new System.Drawing.Size(33, 15);
             this.lblDate.TabIndex = 6;
             this.lblDate.Text = "Date";
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(279, 360);
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Corbel", 9.75F);
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLogout.Location = new System.Drawing.Point(186, 234);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(219, 89);
+            this.btnLogout.Size = new System.Drawing.Size(146, 58);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // frmOrganizer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(543, 503);
+            this.ClientSize = new System.Drawing.Size(362, 327);
             this.ControlBox = false;
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblDate);
@@ -163,6 +176,7 @@ namespace GenericVoting
             this.Controls.Add(this.btnVoters);
             this.Controls.Add(this.btnUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmOrganizer";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
