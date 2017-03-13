@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace Generic_Library
 {
-    public class Voter : UserDecorator
+    public class Voter : UserDecorator,ISerialize
     {
        
         public Voter(User user):base(user)
@@ -20,8 +20,14 @@ namespace Generic_Library
         public Voter()
         { }
 
-      
-       
+        public void Serialize(Stream stream, object entry)
+        {
+            XmlSerializer serialize = new XmlSerializer(typeof(UserConcrete));
+            serialize.Serialize(stream, entry);
+            stream.Close();
+
+        }
+
 
 
         public override string Display()

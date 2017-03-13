@@ -65,18 +65,28 @@ namespace GenericVoting
 
                     UserConcrete user = (UserConcrete)serializer2.Deserialize(stream2);
 
+                    
                     Entry entry = new Entry();
+                    /*
                     entry.entry = txtEntry.Text;
                     entry.description = txtDes.Text;
               
                     entry.entryuser = getname;
 
+                    */
+
+                    entry.AddEntry(txtEntry.Text, txtDes.Text, txtEntry.Text);
+
+
+
                     if (!user.status)
                     {
                         Stream stream = File.Create(folder.getEntry() + entry.entry + ".xml");
+                        /*
                         XmlSerializer serialize = new XmlSerializer(typeof(Entry));
                         serialize.Serialize(stream, entry);
-                        stream.Close();
+                        stream.Close();*/
+                        entry.Serialize(stream, entry);
                         foreach (ListViewItem item in lviEntry.Items)
                         {
                             item.SubItems[0].Text = txtEntry.Text;

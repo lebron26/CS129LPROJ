@@ -31,9 +31,12 @@ namespace GenericVoting
 
             Stream stream = File.Create(folder.getContest() + txtContest.Text + ".xml");
 
+            /*
             XmlSerializer serialize = new XmlSerializer(typeof(Contest));
             serialize.Serialize(stream, contest);
             stream.Close();
+            */
+            contest.Serialize(stream, contest);
             MessageBox.Show("Contest Created");
 
             Login login = new Login();

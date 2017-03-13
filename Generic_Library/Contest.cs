@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
+using System.Xml.Serialization;
+using Generic_Library;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace Generic_Library
 {
-    public class Contest
+    public class Contest:ISerialize
     {
         public string contest;
         public string description;
@@ -18,6 +23,14 @@ namespace Generic_Library
             this.description = description;
             specificDate = duration;
             this.maxVote = maxVote;
+        }
+
+        public void Serialize(Stream stream, object entry)
+        {
+            XmlSerializer serialize = new XmlSerializer(typeof(Contest));
+            serialize.Serialize(stream, entry);
+            stream.Close();
+
         }
         public bool WinVotes(int entryvote,int maxVote)
         {

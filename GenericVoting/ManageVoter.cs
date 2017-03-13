@@ -85,12 +85,17 @@ namespace GenericVoting
 
                     UserDecorator decorate;
                     decorate = new Voter(userconcrete);
-                    
-                    Stream stream = File.Create(folder.getUser() + userconcrete.username + ".xml");
 
+                    Voter vot = new Voter();
+                    Stream stream = File.Create(folder.getUser() + userconcrete.username + ".xml");
+                    /*
                     XmlSerializer serialize = new XmlSerializer(typeof(UserConcrete));
                     serialize.Serialize(stream, userconcrete);
                     stream.Close();
+                    
+    */
+                    vot.Serialize(stream, userconcrete);
+                    
                     MessageBox.Show(userconcrete.Display());
                 }
                 lviVoter.Items.Clear();

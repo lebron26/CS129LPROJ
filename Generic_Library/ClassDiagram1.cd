@@ -17,30 +17,33 @@
   <Class Name="Generic_Library.Voter">
     <Position X="5.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Voter.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.391" />
   </Class>
   <Class Name="Generic_Library.Entry">
     <Position X="9" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABEAAAAAAAAAAAAAIAAAAQAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <HashCode>ABEAgAAAAAAAAAAAIAAAAQAAACAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Entry.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="1.162" />
   </Class>
   <Class Name="Generic_Library.Organizer">
     <Position X="12.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Organizer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Generic_Library.Contest">
     <Position X="9" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAIBgAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAIBgAAAAAAIBAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Contest.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.534" />
   </Class>
   <Class Name="Generic_Library.UserConcrete">
     <Position X="1.75" Y="4.75" Width="1.5" />
@@ -52,9 +55,16 @@
   <Class Name="Generic_Library.ClassFolder">
     <Position X="15.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABAgAAA=</HashCode>
+      <HashCode>EAAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAAAAABAgAAA=</HashCode>
       <FileName>ClassFolder.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="Generic_Library.ISerialize">
+    <Position X="5.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISerialize.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

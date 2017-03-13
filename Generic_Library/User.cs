@@ -8,5 +8,6 @@ namespace Generic_Library
     public abstract class User
     {
         public abstract string Display();
+    
     }
 }

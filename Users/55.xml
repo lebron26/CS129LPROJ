@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <UserConcrete xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <username>6</username>
-  <password>6</password>
-  <firstname>66</firstname>
-  <lastname>66</lastname>
+  <username>55</username>
+  <password>55</password>
+  <firstname>55</firstname>
+  <lastname>55</lastname>
   <type>Voter</type>
   <status>false</status>
-  <entry>5</entry>
+  <entry>null</entry>
 </UserConcrete>

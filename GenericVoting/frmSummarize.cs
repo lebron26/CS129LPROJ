@@ -27,13 +27,11 @@ namespace GenericVoting
         private void btnClose_Click(object sender, EventArgs e)
         {
             folder = new ClassFolder();
-            this.clearFolder(folder.getUser());
-          
+            folder.clearFolder(folder.getUser());
+            folder.clearFolder(folder.getEntry());
 
-            this.clearFolder(folder.getEntry());
-
-            this.clearFolder(folder.getContest());
-     
+            folder.clearFolder(folder.getContest());
+        
             this.Close();
             Login login = new Login();
             login.Show();
@@ -67,21 +65,7 @@ namespace GenericVoting
             }
 
         }
-        private void clearFolder(string FolderName)
-        {
-            DirectoryInfo dir = new DirectoryInfo(FolderName);
 
-            foreach (FileInfo fi in dir.GetFiles())
-            {
-                fi.Delete();
-            }
-
-            foreach (DirectoryInfo di in dir.GetDirectories())
-            {
-                clearFolder(di.FullName);
-                di.Delete();
-            }
-        }
     }
 
 }
